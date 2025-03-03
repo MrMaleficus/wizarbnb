@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   get 'services/index'
   get 'services/show'
   get 'services/new'
