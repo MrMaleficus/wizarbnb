@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboards/dashboard'
   get 'services/index'
   get 'services/show'
   get 'services/new'
