@@ -1,50 +1,18 @@
 <h1>USERS</h1>
 
-
 <div class="services_index">
   <div class="container">
     <div class="row">
-      <div class="card-user  my-5 col-3">
-        <%= image_tag "visage.jpg", class:"pict-user-card" %>
-        <div class="card-body">
-          <h5 class="card-title">USER'S NAME</h5>
-          <p class="card-text">SPECIALITY</p>
-          <a href="#" class="btn">...</a>
+      <% @users.each do |user| %>
+        <div class="card-user  my-5 col-3">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"pict-user-card" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= "#{user.name}" %></h5>
+            <p class="card-text">SPECIALITY</p>
+            <a href="#" class="btn">...</a>
+          </div>
         </div>
-      </div>
-
-
-
-      <div class="card-user my-5 col-3" style="width: 18rem; ">
-        <%= image_tag "visage.jpg", class:"pict-user-card" %>
-        <div class="card-body">
-          <h5 class="card-title">USER'S NAME</h5>
-          <p class="card-text">SPECIALITY</p>
-          <a href="#" class="btn">...</a>
-        </div>
-      </div>
-
-
-
-      <div class="card-user my-5 col-3" style="width: 18rem; ">
-        <%= image_tag "visage.jpg", class:"pict-user-card" %>
-        <div class="card-body">
-          <h5 class="card-title">USER'S NAME</h5>
-          <p class="card-text">SPECIALITY</p>
-          <a href="#" class="btn">...</a>
-        </div>
-      </div>
-
-
-
-      <div class="card-user my-5 col-3" style="width: 18rem; ">
-        <%= image_tag "visage.jpg", class:"pict-user-card" %>
-        <div class="card-body">
-          <h5 class="card-title">USER'S NAME</h5>
-          <p class="card-text">SPECIALITY</p>
-          <a href="#" class="btn">...</a>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

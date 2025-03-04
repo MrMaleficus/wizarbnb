@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   #TODO  get "users" => "users#index", as: :users
+
+
   resources :services, except: [:edit, :update] do
     resources :bookings, only: [:new, :create]
   end
