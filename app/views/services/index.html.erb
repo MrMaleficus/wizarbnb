@@ -5,7 +5,7 @@
     <div class="row">
       <% @users.each do |user| %>
         <div class="card-user  my-5 col-3">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}" %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"pict-user-card" %>
           <div class="card-body">
             <h5 class="card-title"><%= "#{user.name}" %></h5>
             <p class="card-text">SPECIALITY</p>
