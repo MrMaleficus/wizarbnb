@@ -1,2 +1,24 @@
-<h1>Services#new</h1>
-<p>Find me in app/views/services/new.html.erb</p>
+<div class="container mt-5">
+  <div class="card shadow p-4" style="max-width: 600px; margin: auto;">
+    <h2 class="card-title text-center mb-4">Créer un Service</h2>
+    <%= simple_form_for @service do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :name,
+                    label: "Nom du service",
+                    input_html: { class: "form-control" },
+                    wrapper_html: { class: "mb-3" } %>
+
+        <%= f.input :daily_rate,
+                    label: "Tarif journalier (€)",
+                    input_html: { class: "form-control", type: "number", step: "1" },
+                    wrapper_html: { class: "mb-3" } %>
+      </div>
+
+      <div class="form-actions text-center">
+        <%= f.button :submit, "Créer le Service", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
