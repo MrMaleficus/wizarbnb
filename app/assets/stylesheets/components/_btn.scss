@@ -10,3 +10,39 @@
     background-color: rgb(248, 184, 101);
   }
 }
+
+.btn-creation {
+  background-color: rgb(151, 111, 255);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+ :hover {
+   background-color: rgb(251, 216, 164);
+   transform: scale(1.05);
+ }
+}
+
+.btn-destroy {
+  background-color: rgb(255, 42, 74);
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 8px;
+  cursor: pointer;
+  transition: background-color 0.5s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  :hover {
+    background-color: rgb(255, 216, 152);
+    transform: scale(1.05);
+  }
+}
