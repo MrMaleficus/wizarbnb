@@ -2,7 +2,6 @@
 
 <%= form_with model: @booking, local: true do |form| %>
   <div class="mb-3">
-    <%= form.label :start_date, "Date de début" %>
-    <%= form.date_field :start_date, class: "form-control" %>
+    <%= form.text_field :date, class: "datepicker" %>
   </div>
 <% end %>

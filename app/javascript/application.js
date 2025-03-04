@@ -3,3 +3,9 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
+
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css";
+document.addEventListener("turbo:load", () => {
+  flatpickr(".datepicker", {});
+});
