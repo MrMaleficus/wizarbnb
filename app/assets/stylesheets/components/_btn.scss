@@ -10,3 +10,16 @@
     background-color: rgb(248, 184, 101);
   }
 }
+
+.log-btn {
+  background-color: #6704d7;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  transition: 2s;
+  width: 3rem;
+  margin: 8px;
+
+  :hover{
+    background-color: #3b7df1(248, 184, 101);
+  }
+}

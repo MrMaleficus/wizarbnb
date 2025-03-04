@@ -24,7 +24,8 @@
           </div>
         </li>
         <% else %>
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a>
+        <%# <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         <% end %>
       </ul>
     </div>
