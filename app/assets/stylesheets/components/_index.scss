@@ -3,3 +3,14 @@
 @import "avatar";
 @import "form_legend_clear";
 @import "navbar";
+@import "card";
+@import "btn";
+
+
+body {
+  font-family: 'Cinzel', serif;
+}
+
+.row {
+  justify-content: space-between;
+}
