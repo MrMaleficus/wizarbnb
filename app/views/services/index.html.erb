@@ -1,18 +1,27 @@
+<body class="container">
+
+
+
 <h1>USERS</h1>
 
-<div class="services_index">
   <div class="container">
     <div class="row">
       <% @users.each do |user| %>
-        <div class="card-user  my-5 col-3">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"pict-user-card" %>
+        <div class="card-user my-5 col-3">
+          <div class="avatar-container">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"card-avatar" %>
+            <%= image_tag "logo.png", class:"avatar-badge" %>
+            </div>
           <div class="card-body">
             <h5 class="card-title"><%= "#{user.name}" %></h5>
-            <p class="card-text">SPECIALITY</p>
-            <a href="#" class="btn">...</a>
+            <h6 class="propos">A propos de moi</h6>
+            <p class="card-text">Speciality ...</p>
+            <p class="card-text">Speciality ...</p>
+            <p class="card-text">Speciality ...</p>
+            <%# <a href="#" class="btn btn-card-user">Plus...</a> %>
           </div>
-        </div>
+      </div>
       <% end %>
     </div>
   </div>
-</div>
+</body>
