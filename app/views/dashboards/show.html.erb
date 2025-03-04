@@ -1,2 +1,25 @@
-<h1>Dashboards#dashboard</h1>
-<p>Find me in app/views/dashboards/dashboard.html.erb</p>
+
+<h2>Liste de vos services</h2>
+<% @services.each do |service| %>
+  <div class="card shadow p-4 mb-3">
+    <h3 class="card-title"><%= service.name %></h3>
+    <p class="card-text">Tarif journalier: <%= service.daily_rate %>€</p>
+    <%= button_to "Effacer", service_path(service), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir effacer ce service ?" }, class: "btn btn-danger" %>
+  </div>
+<% end %>
+<%= link_to "Créer un service", new_service_path, class: "btn" %>
+
+
+<h2>Réservations en cours</h2>
+<% @bookings.each do |booking| %>
+  <div class="card shadow p-4 mb-3">
+    <h3 class="card-title"><%= booking.service.name %></h3>
+    <p class="card-text">Date de début: <%= booking.start_date %></p>
+    <p class="card-text">Date de fin: <%= booking.end_date %></p>
+    <p class="card-text">Prix total: <%= booking.total_price %>€</p>
+    <p class="card-text">Statut: <%= booking.status %></p>
+  </div>
+<% end %>
+
+
+<h2>Histoire des réservations</h2>

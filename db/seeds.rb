@@ -6,7 +6,6 @@ require 'uri'
 require 'dotenv/load'
 
 GITHUB_TOKEN = ENV['GITHUB_TOKEN']
-break if GITHUB_TOKEN.blank?
 all_members = []
 pages = (1..800).to_a.sample(4)
 pages.each do |page|
