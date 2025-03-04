@@ -1,2 +1,8 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+
+
+<%= form_with model: @booking, local: true do |form| %>
+  <div class="mb-3">
+    <%= form.label :start_date, "Date de début" %>
+    <%= form.date_field :start_date, class: "form-control" %>
+  </div>
+<% end %>
