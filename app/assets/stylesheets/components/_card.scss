@@ -1,10 +1,23 @@
+body.container {
+  background-image: url('cosmos.jpeg');
+  // background-size: cover;
+
+    h1 {
+      color: rgb(120, 120, 239);
+    }
+}
+
 .card-user {
-  background-image: url('parchemin.jpg') ;
-  background-size: cover;
+  // position: absolute;
+  // background-image: url('parchemin.jpg');
+  // background-size: cover;
+  background-color: rgb(0, 0, 0);
+  color: white;
   border-radius: 10px;
   border: 1px solid rgba($color: #000000, $alpha: 1.0);
   font-family: 'Cinzel', serif;
   width: 18rem;
+  height: 22rem;
 
     .pict-user-card {
       width: 150px;
@@ -13,11 +26,49 @@
       border-radius: 5px;
     }
 
+    .avatar-container {
+      margin-top: 10px;
+      position: relative;
+      width: 175px; /* Adjust as needed */
+      height: 175px; /* Adjust as needed */
+    }
+    .card-avatar {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px; /* Optional */
+    }
+    .avatar-badge {
+      position: absolute;
+      top: 10px;
+      right: -30px;
+      width: 70px; /* Adjust as needed */
+      height: 70px; /* Adjust as needed */
+      border-radius: 50%;
+      border: 2px solid white; /* Optional */
+    }
+
     h5 {
-      margin-left: 8px;
+      margin-top: 5px;
     }
 
     p {
-      margin-left: 8px;
+      margin-left: 0px;
+    }
+
+    .btn-card-user {
+      background-color: rgb(116, 84, 43);
+      border-radius: 15px;
+      border: 1px solid rgb(0, 0, 0);
+      transition: 2s;
+      width: 60px;
+      height: 40px;
+      margin: 2px;
+      text-decoration: none;
+      color: black;
+
+      :hover {
+        background-color: rgb(248, 184, 101);
+      }
     }
 }
