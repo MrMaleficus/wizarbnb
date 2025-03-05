@@ -11,3 +11,18 @@
 @import "components/index";
 @import "pages/index";
 
+.flatpickr-day.startRange:not(.endRange),
+.flatpickr-day.endRange:not(.startRange) {
+  background: grey;
+  border-color: grey;
+}
+
+.flatpickr-day.inRange {
+  background: #8e63ff;
+  border-color: #8e63ff;
+}
+
+.flatpickr-day.startRange.endRange {
+  background: #8e63ff !important;
+  border-color: #8e63ff !important;
+}
