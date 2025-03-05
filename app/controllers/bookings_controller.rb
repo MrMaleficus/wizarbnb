@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
         @booking.user = current_user
         @booking.status = "pending"
         if @booking.save
-          redirect_to @booking, dashboard_path
+          redirect_to dashboard
         else
           render :new, status: :unprocessable_entity
         end
