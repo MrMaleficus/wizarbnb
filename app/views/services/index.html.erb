@@ -5,15 +5,14 @@
         <div class="house house-<%= user.house %> my-3 col-3">
           <div class="avatar-container">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"card-avatar" %>
-            <%= image_tag "#{user.house}.png", class:"avatar-badge-format" %>
-            </div>
-          <div class="card-body">
-            <h5 class="card-title"><%= "#{user.name}" %></h5>
-            <h6 class="propos">A propos de moi</h6>
-            <p class="card-text">Speciality ...</p>
-          </div>
+          <%= image_tag "#{user.house}.png", class:"avatar-badge-format" %>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title-user"><%= "#{user.name}" %></h5>
+          <p class="card-text-user"><%= "#{pluralize(user.services.size, "service")}" %></p>
+        </div>
+        <% end %>
       </div>
       <% end %>
-    </div>
   </div>
 </body>
