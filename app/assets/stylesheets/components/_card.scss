@@ -17,7 +17,7 @@
       border-radius: 10px;
       font-family: 'Cinzel', serif;
       width: 18rem;
-      height: 18rem;
+      height: 20rem;
     }
 
     .avatar-container {
@@ -29,7 +29,7 @@
 
     .card-avatar {
       width: 80%;
-      height: 80%;
+      height: 90%;
       object-fit: cover;
       border-radius: 10px; /* Optional */
     }
@@ -41,9 +41,9 @@
       margin: 0;
       position: absolute;
       top: 10px;
-      right: -20px;
-      width: 70px; /* Adjust as needed */
-      height: 70px; /* Adjust as needed */
+      right: -80px;
+      width: 80px; /* Adjust as needed */
+      height: 80px; /* Adjust as needed */
       border-radius: 50%;
     }
 
