@@ -4,6 +4,7 @@ require 'net/http'
 require 'json'
 require 'uri'
 require 'dotenv/load'
+require 'faker'
 
 GITHUB_TOKEN = ENV['GITHUB_TOKEN']
 all_members = []
@@ -44,7 +45,15 @@ all_members.each do |member|
   user.password = "password"
   user.nickname = member
   user.name = profile["name"]
+  user.house = ["red", "green", "blue", "yellow"].sample
   user.github_id = profile["id"]
   user.save
+  4.times do
+    service = Service.new
+    service.name = Faker::ProgrammingLanguage.name
+    service.daily_rate = rand(10..100)
+    service.user = user
+    service.save
+  end
   p "Création de #{user.nickname}"
 end
