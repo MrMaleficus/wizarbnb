@@ -78,3 +78,5 @@ gem "devise", "~> 4.9"
 gem "dotenv", "~> 3.1"
 
 gem "flatpickr", "~> 4.6"
+
+gem "faker", "~> 3.5"

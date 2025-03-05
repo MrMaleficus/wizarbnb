@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-dark navbar">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
+      <%= image_tag "logo site final.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,8 @@
           </div>
         </li>
         <% else %>
-        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a>
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        <%# <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a> %>
         <% end %>
       </ul>
     </div>
