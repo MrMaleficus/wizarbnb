@@ -11,22 +11,26 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+
+<body class="d-flex flex-column min-vh-100">
   <div class="wizarbnb-navbar">
     <%= render 'shared/navbar' %>
   </div>
+
+  <main class="flex-grow-1">
     <%= yield %>
-  </body>
-  <div class="footer">
-  <div class="footer-copyright">
-    This footer is made with some magic at Le Wagon <i class="fa-solid fa-wand-magic-sparkles"></i>
-  </div>
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-</div>
-</html>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-copyright">
+      This footer is made with some magic at Le Wagon <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+</body>
