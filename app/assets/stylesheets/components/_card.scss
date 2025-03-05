@@ -1,3 +1,7 @@
+    .body-card {
+      background-color: rgba(49, 49, 49, 0.5);
+    }
+
     .card-title-user {
       margin-top: 5px;
       color: wheat;
@@ -21,6 +25,7 @@
       font-family: 'Cinzel', serif;
       width: 18rem;
       height: 20rem;
+      opacity: 0.85;
     }
 
     .avatar-container {
@@ -52,16 +57,45 @@
 
     .house-blue {
       background-image: url('card-blue.png');
+      transition: ease 0.5s;
+
+
+        &:hover {
+          transition: ease 0.5s;
+          box-shadow: 0px 0px 25px rgb(73, 73, 247);
+          opacity: 1;
+        }
     }
 
     .house-red {
       background-image: url('card-red.png');
+      transition: ease 0.5s;
+
+      &:hover {
+        transition: ease 0.5s;
+        box-shadow: 0px 0px 25px rgb(247, 73, 73);
+        opacity: 1;
+      }
     }
 
     .house-green {
       background-image: url('card-green.png');
+      transition: ease 0.5s;
+
+        &:hover {
+          transition: ease 0.5s;
+          box-shadow: 0px 0px 25px rgb(79, 247, 73);
+          opacity: 1;
+        }
     }
 
     .house-yellow {
       background-image: url('card-yellow.png');
+      transition: ease 0.5s;
+
+      &:hover {
+        transition: ease 0.5s;
+        box-shadow: 0px 0px 25px rgb(233, 247, 73);
+        opacity: 1;
+      }
     }
