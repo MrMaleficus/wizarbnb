@@ -31,6 +31,7 @@
     }
 
     .card-avatar {
+      margin: 0;
       width: 80%;
       height: 90%;
       object-fit: cover;
@@ -54,12 +55,12 @@
       background-image: url('card-blue.png');
       transition: ease 0.5s;
 
-
         &:hover {
           transition: ease 0.5s;
-          box-shadow: 0px 0px 25px rgb(73, 73, 247);
+          box-shadow: 0px 0px 40px rgb(73, 73, 247);
           opacity: 1;
-        }
+          transform: skew(2deg, 2deg);
+          }
     }
 
     .house-red {
@@ -68,8 +69,9 @@
 
       &:hover {
         transition: ease 0.5s;
-        box-shadow: 0px 0px 25px rgb(247, 73, 73);
+        box-shadow: 0px 0px 40px rgb(247, 73, 73);
         opacity: 1;
+        transform: skew(2deg, 2deg);
       }
     }
 
@@ -79,8 +81,9 @@
 
         &:hover {
           transition: ease 0.5s;
-          box-shadow: 0px 0px 25px rgb(79, 247, 73);
+          box-shadow: 0px 0px 40px rgb(79, 247, 73);
           opacity: 1;
+          transform: skew(2deg, 2deg);
         }
     }
 
@@ -90,7 +93,8 @@
 
       &:hover {
         transition: ease 0.5s;
-        box-shadow: 0px 0px 25px rgb(233, 247, 73);
+        box-shadow: 0px 0px 40px rgb(233, 247, 73);
         opacity: 1;
+        transform: skew(2deg, 2deg);
       }
     }
