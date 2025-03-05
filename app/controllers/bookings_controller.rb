@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
         @booking.user = current_user
         @booking.status = "pending"
         if @booking.save
-          redirect_to dashboard
+          redirect_to dashboard_path
         else
           render :new, status: :unprocessable_entity
         end
@@ -47,13 +47,13 @@ class BookingsController < ApplicationController
   def accept
     @booking = Booking.find(params[:id])
     @booking.status = "accepted"
-    render json: { id: @booking.id, status: @booking.status }
+    redirect_to dashboard_path
   end
 
   def decline
     @booking = Booking.find(params[:id])
     @booking.destroy
-    render json: { id: @booking.id, status: @booking.status }
+    redirect_to dashboard_path
   end
 
   private
