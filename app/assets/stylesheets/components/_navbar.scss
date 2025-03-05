@@ -1,11 +1,12 @@
 .navbar {
   justify-content: space-between;
-  // background: rgb(34, 47, 91) ;
-  background-image:url('sky_stars.jpg');
-
+  // background: rgb(36, 36, 44) ;
   padding: 0.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   font-family: 'Cinzel', serif;
+  p {
+    margin: 0;
+  }
 }
 
 .navbar .navbar-brand img {
@@ -18,13 +19,15 @@
 }
 
 .navbar .nav-link {
-  color: #ffffff;
+  // color: #ffffff;
+  color: #42535c;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-  color: #dcdcdc;
+  // color: #dcdcdc;
+  color: #42535c;
 }
 
 .navbar .dropdown-menu {
@@ -33,7 +36,8 @@
 }
 
 .navbar .dropdown-item {
-  color: #fff;
+  // color: #fff;
+  color: #42535c;
   transition: background-color 0.3s ease;
 }
 
@@ -45,6 +49,11 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  // border: 2px solid #fff;
+  border: 2px solid #42535c;
   cursor: pointer;
+}
+
+.logo-name {
+  color: #495057;
 }
