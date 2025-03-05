@@ -13,10 +13,10 @@ Rails.application.routes.draw do
 
   resources :services, except: [:edit, :update] do
     resources :bookings
-    get "bookings/:id/accept" => "bookings#accept", as: :accept_booking
-    get "bookings/:id/decline" => "bookings#decline", as: :decline_booking
   end
 
+  post "bookings/:id/accept" => "bookings#accept", as: :accept_booking
+  post "bookings/:id/decline" => "bookings#decline", as: :decline_booking
 
   #  resources :bookings, only: [:index, :show, :destroy]
   get "dashboard" => "dashboards#show"
