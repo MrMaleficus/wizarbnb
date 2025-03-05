@@ -31,7 +31,7 @@
             <%= link_to "Déconnexion", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
           </div>
         </li>
-        <% else %
+        <% else %>
         <%= link_to "Connexion 9¾", new_user_session_path, class: "nav-link" %>
         <%# <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">Se connecter</a> %>
         <% end %>
