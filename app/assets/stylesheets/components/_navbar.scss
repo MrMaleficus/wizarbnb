@@ -26,13 +26,13 @@
 }
 
 .navbar .nav-link:hover {
-  // color: #dcdcdc;
-  color: #42535c;
+  color: #dcdcdc;
+  // color: #42535c;
 }
 
 .navbar .dropdown-menu {
-  background-color: #343a40;
-  border: none;
+  background-color: #ffffff;
+  border: 1px #42535c;
 }
 
 .navbar .dropdown-item {
@@ -41,9 +41,9 @@
   transition: background-color 0.3s ease;
 }
 
-.navbar .dropdown-item:hover {
-  background-color: #495057;
-}
+// .navbar :hover {
+//   background-color: #1d7ad8;
+// }
 
 .avatar {
   width: 35px;
