@@ -1,8 +1,27 @@
+<h1>Réserver un Wizarbi</h1>
+<h2>Wizarbi: <%= @service.user.name %></h2>
+<h2>Service: <%= @service.name %></h2>
 
-
-<%= form_with model: @booking, local: true do |form| %>
-  <div class="mb-3">
-    <%= form.label :start_date, "Date de début" %>
-    <%= form.date_field :start_date, class: "form-control" %>
+<%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
+  controller: "datepicker",
+  "datepicker-base-price": @service.daily_rate,
+  "datepicker-reserved-dates": @booked_dates.to_json
+} do |form| %>
+  <div class="container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div class="mb-3">
+      <%= form.label :start_date, "Dates de réservation", class: "form-label" %>
+      <%= form.text_field :start_date, data: { "datepicker-target": "input" }, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <strong>Prix total :</strong>
+      <span data-datepicker-target="price" class="price-display">0 €</span>
+    </div>
+    <div class="mb-3">
+      <%= form.label :comment, "Commentaire", class: "form-label" %>
+      <%= form.text_area :comment, rows: 3, class: "form-control" %>
+    </div>
+    <div class="text-center">
+      <%= form.submit "Réserver", class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

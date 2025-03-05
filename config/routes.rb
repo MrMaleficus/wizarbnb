@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "profile" => "users#profile", as: :profile
 
   resources :services, except: [:edit, :update] do
-    resources :bookings, only: [:new, :create]
+    resources :bookings
   end
   #  resources :bookings, only: [:index, :show, :destroy]
   get "dashboard" => "dashboards#show", as: :dashboard

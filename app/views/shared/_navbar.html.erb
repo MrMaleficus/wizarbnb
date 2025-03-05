@@ -16,9 +16,11 @@
         <li class="nav-item">
           <%= link_to "Services", services_path, class: "nav-link" %>
         </li>
+        <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to "Tableau de bord", dashboard_path, class: "nav-link" %>
         </li>
+        <% end %>
         <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.nickname}", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
