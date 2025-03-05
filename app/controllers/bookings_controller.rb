@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
   def index
   end
 
@@ -29,7 +30,7 @@ class BookingsController < ApplicationController
         @booking = Booking.new(start_date: start_date, end_date: end_date)
         @booking.service = Service.find(params[:service_id])
         @booking.comment = booking_params[:comment]
-        @booking.user = User.find(1)
+        @booking.user = current_user
         @booking.status = "pending"
         if @booking.save
           redirect_to @booking, dashboard_path
