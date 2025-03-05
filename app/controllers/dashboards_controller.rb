@@ -1,6 +1,7 @@
 class DashboardsController < ApplicationController
   def show
     @services = current_user.services
-    @bookings = current_user.bookings
+    @user_services = Booking.all.select { |booking| booking.service.user == current_user }
+    @user_bookings = current_user.bookings
   end
 end
