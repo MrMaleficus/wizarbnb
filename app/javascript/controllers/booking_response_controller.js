@@ -21,7 +21,6 @@ export default class extends Controller {
       .then(data => {
         this.acceptButtonTarget.disabled = true;
         this.declineButtonTarget.disabled = true;
-        this.window.location.reload();
       })
       .catch(error => console.error("Erreur:", error));
   }
@@ -44,7 +43,6 @@ export default class extends Controller {
       .then(data => {
         this.acceptButtonTarget.disabled = true;
         this.declineButtonTarget.disabled = true;
-        this.window.location.reload();
       })
       .catch(error => console.error("Erreur:", error));
   }
