@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     resources :bookings
   end
   #  resources :bookings, only: [:index, :show, :destroy]
-  get "dashboard" => "dashboards#show", as: :dashboard
+  get "dashboard" => "dashboards#show"
   # Defines the root path route ("/")
   # root "posts#index"
 end

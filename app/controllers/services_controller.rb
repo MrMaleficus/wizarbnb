@@ -18,7 +18,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     @service.user = current_user
     if @service.save
-      redirect_to dashboard_path
+      redirect_to dashboard
     else
       render :new, :status => :unprocessable_entity
     end

@@ -3,6 +3,7 @@
 <h2>Service: <%= @service.name %></h2>
 
 <%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
+  turbo: "false",
   controller: "datepicker",
   "datepicker-base-price": @service.daily_rate,
   "datepicker-reserved-dates": @booked_dates.to_json
@@ -21,7 +22,7 @@
       <%= form.text_area :comment, rows: 3, class: "form-control" %>
     </div>
     <div class="text-center">
-      <%= form.submit "Réserver", class: "btn btn-primary" %>
+      <%= form.submit "Réserver", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
     </div>
   </div>
 <% end %>
