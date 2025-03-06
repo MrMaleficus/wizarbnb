@@ -82,3 +82,5 @@ gem "flatpickr", "~> 4.6"
 gem "faker", "~> 3.5"
 
 gem "pg_search", "~> 2.3"
+
+gem "will_paginate", "~> 4.0"
