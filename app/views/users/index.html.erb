@@ -8,8 +8,10 @@
             <%= image_tag "#{user.house}.png", class:"avatar-badge-format" %>
           </div>
           <div class="card-body">
-            <h5 class="card-title-user"><%= "#{user.name}" %></h5>
-            <p class="card-text-user"><%= "#{pluralize(user.services.size, "service")}" %></p>
+            <h3 class="card-title-user" style="color:white;font-family: 'Cinzel', serif"><%= "#{user.name}" %></h3>
+            <h5 class="card-text" style="color:white;font-family: 'Cinzel', serif"><%= "#{pluralize(user.services.size, "service")}" %></h5>
+
+            <%= user.star_rating.html_safe %>
           </div>
         <% end %>
       </div>
