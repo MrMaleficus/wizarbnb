@@ -13,7 +13,6 @@
           </div>
       </div>
       <div class="col-9 my-5">
-        <h2>Services de <%=@user.name %></h2>
         <div class="row">
           <% @user.services.each do |service| %>
             <div class="col-md-4 mb-4">
@@ -24,7 +23,6 @@
                   <div class="service-stats mt-3">
                   </div>
                   <div class="mt-3">
-                    <%= link_to "Réserver ce service", new_service_booking_path(service), class: "btn-creation" %>
                   </div>
                 </div>
               </div>
