@@ -104,7 +104,7 @@
 
 .card-two {
   display: flex;
-  flex-direction: row; /* Sur desktop */
+  flex-direction: row;
   align-items: center;
   gap: 20px;
   padding: 60px;
@@ -188,10 +188,10 @@ body {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
-  gap: 20px; /* espace entre les badges */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   padding: 20px;
-  justify-items: center; /* centre chaque badge */
+  justify-items: center;
   align-items: center;
 }
 
@@ -202,9 +202,27 @@ body {
 }
 
 .badge-img {
-  width: 300px; /* ou la taille que tu veux */
-  height: 300px; /* doit être égale à la largeur pour rester rond */
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%; /* rond parfait */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* petit effet sympa */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+// Css du carrousel
+
+.carousel-control-prev, .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev {
+  left: -3%;
+}
+
+.carousel-control-next {
+  right: -3%;
 }
