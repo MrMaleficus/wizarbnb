@@ -1,11 +1,10 @@
 class ServicesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   def index
-    @services = Service.all
     if params[:query]
-      @services = Service.paginate(page: params[:page], per_page: 52).search_by_name(params[:query])
+      @services = Service.paginate(page: params[:page], per_page: 24).search_by_name(params[:query])
     else
-      @services = Service.paginate(page: params[:page], per_page: 52)
+      @services = Service.paginate(page: params[:page], per_page: 24)
     end
   end
 
