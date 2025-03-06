@@ -1,18 +1,24 @@
 <div class="container">
   <div class="row">
-    <% @users.each do |user| %>
-      <div class="card-house house-<%= user.house %> my-3 col-3" >
-        <%= link_to user_path(user) do %>
-        <div class="avatar-container">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"card-avatar" %>
-          <%= image_tag "#{user.house}.png", class:"avatar-badge-format" %>
+    <% @services.each do |service| %>
+      <div class="col-md-3 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">
+              <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
+                   alt="<%= service.name %> logo"
+                   style="width: 20px; height: 20px; margin-right: 8px;">
+              <%= "#{service.name} par #{service.user.name}" %>
+            </h5>
+            <p class="card-text">
+              <%= button_to "Réserver ce service", new_service_booking_path(service), method: :get, class: "btn-creation" %>
+            </p>
+            <p class="card-text">
+              <strong>Tarif journalier :</strong> <%= service.daily_rate %>€
+            </p>
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title-user"><%= "#{user.name}" %></h5>
-          <p class="card-text-user"><%= "#{pluralize(user.services.size, "service")}" %></p>
-        </div>
-        <% end %>
       </div>
-     <% end %>
+    <% end %>
   </div>
 </div>

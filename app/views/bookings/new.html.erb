@@ -1,28 +1,48 @@
-<h1>Réserver un Wizarbi</h1>
-<h2>Wizarbi: <%= @service.user.name %></h2>
+<h1>Réserver un Sorcier</h1>
+<h2>Sorcier: <%= @service.user.name %></h2>
 <h2>Service: <%= @service.name %></h2>
 
-<%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
-  turbo: "false",
-  controller: "datepicker",
-  "datepicker-base-price": @service.daily_rate,
-  "datepicker-reserved-dates": @booked_dates.to_json
-} do |form| %>
-  <div class="container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
-    <div class="mb-3">
-      <%= form.label :start_date, "Dates de réservation", class: "form-label" %>
-      <%= form.text_field :start_date, data: { "datepicker-target": "input" }, class: "form-control" %>
+
+<div class="container">
+  <div class="row">
+    <div class="house house-<%= @service.user.house %> my-3 col-3" >
+      <div class="avatar-container">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@service.user.nickname}", class:"card-avatar" %>
+        <%= image_tag "#{@service.user.house}.png", class:"avatar-badge-format" %>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title-user" style="color:white"><%= "#{@service.user.name}" %></h3>
+        <h5 class="card-text" style="color:white"><%= "#{pluralize(@service.user.services.size, "service")}" %></h5>
+      </div>
     </div>
-    <div class="mb-3">
-      <strong>Prix total :</strong>
-      <span data-datepicker-target="price" class="price-display">0 €</span>
-    </div>
-    <div class="mb-3">
-      <%= form.label :comment, "Commentaire", class: "form-label" %>
-      <%= form.text_area :comment, rows: 3, class: "form-control" %>
-    </div>
-    <div class="text-center">
-      <%= form.submit "Réserver", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
+    <div class="col-9 my-5">
+      <div class="row">
+        <%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
+          turbo: "false",
+          controller: "datepicker",
+          "datepicker-base-price": @service.daily_rate,
+          "datepicker-reserved-dates": @booked_dates.to_json
+        } do |form| %>
+          <div class="container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+            <div class="mb-3">
+              <%= form.label :start_date, "Dates de réservation", class: "form-label" %>
+              <%= form.text_field :start_date, data: { "datepicker-target": "input" }, class: "form-control" %>
+            </div>
+            <div class="mb-3">
+              <strong>Prix total :</strong>
+              <span data-datepicker-target="price" class="price-display">0 €</span>
+            </div>
+            <div class="mb-3">
+              <%= form.label :comment, "Commentaire", class: "form-label" %>
+              <%= form.text_area :comment, rows: 3, class: "form-control" %>
+            </div>
+            <div class="text-center">
+              <%= form.submit "Réserver", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-<% end %>
+</div>
+</div>
