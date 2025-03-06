@@ -1,4 +1,8 @@
 .background-user {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   &.background-house-blue {
     background-image: url('blue-wall.png');
   }
