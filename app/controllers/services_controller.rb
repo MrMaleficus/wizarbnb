@@ -2,6 +2,9 @@ class ServicesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   def index
     @services = Service.all
+    if params[:query]
+      @services = Service.search_by_name(params[:query])
+    end
   end
 
   def show
