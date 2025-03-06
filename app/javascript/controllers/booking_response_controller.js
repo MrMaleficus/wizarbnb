@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ["acceptButton", "declineButton"];
+  static targets = ["container", "acceptButton", "declineButton"];
 
   accept(event) {
     event.preventDefault();
@@ -19,8 +19,7 @@ export default class extends Controller {
         throw new Error("Erreur lors de l'acceptation");
       })
       .then(data => {
-        this.acceptButtonTarget.disabled = true;
-        this.declineButtonTarget.disabled = true;
+        this.containerTarget.innerHTML = data.html;
       })
       .catch(error => console.error("Erreur:", error));
   }
@@ -41,8 +40,7 @@ export default class extends Controller {
         throw new Error("Erreur lors du refus");
       })
       .then(data => {
-        this.acceptButtonTarget.disabled = true;
-        this.declineButtonTarget.disabled = true;
+        this.containerTarget.innerHTML = data.html;
       })
       .catch(error => console.error("Erreur:", error));
   }
