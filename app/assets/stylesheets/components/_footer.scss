@@ -1,0 +1,36 @@
+
+.footer {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0 50px;
+  color: rgba(0,0,0,0.3);
+  width: 100%;
+}
+
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: #37333d;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 0.15;
+}
+.footer .fa-wand-magic-sparkles .footer-copyright{
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.footer-copyright {
+  color: #ffffff;
+  opacity: 0.8;
+}
