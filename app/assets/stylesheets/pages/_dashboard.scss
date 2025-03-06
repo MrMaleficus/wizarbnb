@@ -3,3 +3,36 @@
   font-family: 'Cinzel', serif;
   margin: 15px;
 }
+
+
+.card-dash {
+  // background-image: url('parchment-paper.jpg');
+  border-bottom: 2px solid wheat;
+  background-color: rgba(150, 150, 149, 0.3);
+  border-radius: 12px;
+}
+
+.card-dash-text {
+  color: white;
+}
+
+.card-dash-title {
+  color: wheat;
+  font-family: 'Cinzel', serif;
+}
+
+.card-dash-btn {
+  border-bottom: 2px solid wheat;
+  background-color: rgba(150, 150, 149, 0.3);
+  border-radius: 3px;
+  color: wheat;
+}
+
+.card-dash-btn-ppl {
+  border-bottom: 2px solid wheat;
+  background-color: rgba(150, 150, 149, 0.3);
+  border-radius: 3px;
+  font-size: 18px;
+  margin: 3px;
+  color: wheat;
+}
