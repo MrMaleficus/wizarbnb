@@ -21,11 +21,20 @@
 }
 
 .search-form-control .form-control:focus {
-  border: 1px solid #411e93;
+  // border: 1px solid #411e93;
   outline: none !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  // box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
+.search-wrapper {
+  position: absolute;
+  top: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .serch-bar-center {
   display: flex;
   justify-content: center;
@@ -60,11 +69,11 @@
 
 .home-center-top {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -150px;
 }
 
 .card-category {
-  margin: 80px 40px 0 40px;
+  margin: 180px 40px 0 40px;
   background-size: cover;
   background-position: center;
   height: 480px;
@@ -76,15 +85,15 @@
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  background-image:url('banner.jpg');
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // background-image:url('banner.jpg');
 }
 
 .serch-bar-center {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 280px;
+  margin-top: -40px;
 }
 
 
@@ -99,8 +108,8 @@
   align-items: center;
   gap: 20px;
   padding: 60px;
-  background: rgba(80, 125, 168, 0.2);
-  box-shadow: 0 0 15px rgba(165, 123, 184, 0.2);
+  // background: rgba(80, 125, 168, 0.2);
+  // box-shadow: 0 0 15px rgba(165, 123, 184, 0.2);
   margin: 90px 0;
   flex-wrap: wrap;
 }
@@ -108,6 +117,7 @@
 .card-explication {
   flex: 1;
   min-width: 300px;
+  color: white;
 }
 
 .card-explication-img {
@@ -127,11 +137,13 @@
 .card-explication-h6 {
   font-family: 'Cinzel', serif;
   font-size: 1.2rem;
+  color: white;
 }
 
 .card-explication-p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
+  color: white;
 }
 
 ul {
@@ -153,4 +165,46 @@ ul {
   .card-explication-img img {
     max-width: 90%;
   }
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('test-home-V2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: normal;
+}
+
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+  gap: 20px; /* espace entre les badges */
+  padding: 20px;
+  justify-items: center; /* centre chaque badge */
+  align-items: center;
+}
+
+.badge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.badge-img {
+  width: 300px; /* ou la taille que tu veux */
+  height: 300px; /* doit être égale à la largeur pour rester rond */
+  object-fit: cover;
+  border-radius: 50%; /* rond parfait */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* petit effet sympa */
 }

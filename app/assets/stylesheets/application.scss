@@ -28,7 +28,7 @@
 }
 
 .footer {
-  background: #F4F4F4;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,12 +54,11 @@
   opacity: 0.15;
 }
 .footer .fa-wand-magic-sparkles .footer-copyright{
-  color: #37333d;
+  color: #ffffff;
   opacity: 0.8;
 }
 
 .footer-copyright {
-  color: #37333d;
+  color: #ffffff;
   opacity: 0.8;
-
 }

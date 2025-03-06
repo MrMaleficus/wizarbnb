@@ -1,48 +1,87 @@
-
-
 <div class="card-category">
-  <div class = "d-flex flex-column">
-    <div class = "banner_title">
-      <h1 class = "home-center-top harry-font">Développer vos projets avec les pouvoirs des freelancers</h1>
-    </div>
-    <div class = "serch-bar-center">
+  <div class="banner_title">
+    <h1 class="home-center-top harry-font">Développer vos projets avec les pouvoirs des freelancers</h1>
+  </div>
+
+  <!-- La barre de recherche sort du flux normal, donc elle est libre -->
+  <div class="search-wrapper">
+    <div class="serch-bar-center">
       <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" id="search_query"
-           placeholder="Recherchez un service..."/>
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
+        <div class="search-form-control form-group">
+          <input class="form-control string required" type="text" name="search[query]" id="search_query"
+            placeholder="Recherchez un service..."/>
+          <button name="button" type="submit" class="btn btn-flat">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
 
-<div class="col-6-md col-7-sm col-15-xs card-two d-flex flex-md-row flex-column align-items-center">
-  <div class="card-explication flex-grow-1">
-    <h3 class="second-title">Des freelances compétents dans tous les domaines à portée de clic magic !</h3>
-    <ul>
-      <li class="p-2">
-        <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Un travail de qualité - efficace et fiable</h6>
-        <p class="card-explication-p">Recevez des livraisons ponctuelles et de qualité, qu'il s'agisse d'un travail à court terme ou d'un projet complexe</p>
-      </li>
-      <li class="p-2">
-        <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Sécurité pour chaque commande</h6>
-        <p class="card-explication-p">Paiements protégés par la technologie SSL. Les transactions ne sont pas libérées tant qu'une livraison n'a pas été approuvée.</p>
-      </li>
-      <li class="p-2">
-        <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Local ou mondial</h6>
-        <p class="card-explication-p">Travaillez avec des experts germanophones ou des talents internationaux, en fonction de vos préférences et de vos besoins.</p>
-      </li>
-      <li class="p-2">
-        <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> 24 heures sur 24, 7 jours sur 7 - assistance en continu</h6>
-        <p class="card-explication-p">Des questions ? Notre équipe d'assistance est disponible 24 heures sur 24, à tout moment et en tout lieu.</p>
-      </li>
-    </ul>
+
+  <div class="col-6-md col-7-sm col-15-xs card-two d-flex flex-md-row flex-column align-items-center">
+    <div class="card-explication flex-grow-1">
+      <h3 class="second-title">Des freelances compétents dans tous les domaines à portée de clic magic !</h3>
+      <ul>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Un travail de qualité - efficace et fiable</h6>
+          <p class="card-explication-p">Recevez des livraisons ponctuelles et de qualité, qu'il s'agisse d'un travail à court terme ou d'un projet complexe</p>
+        </li>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Sécurité pour chaque commande</h6>
+          <p class="card-explication-p">Paiements protégés par la technologie SSL. Les transactions ne sont pas libérées tant qu'une livraison n'a pas été approuvée.</p>
+        </li>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Local ou mondial</h6>
+          <p class="card-explication-p">Travaillez avec des experts germanophones ou des talents internationaux, en fonction de vos préférences et de vos besoins.</p>
+        </li>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> 24 heures sur 24, 7 jours sur 7 - assistance en continu</h6>
+          <p class="card-explication-p">Des questions ? Notre équipe d'assistance est disponible 24 heures sur 24, à tout moment et en tout lieu.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card-explication-img">
+      <%= image_tag "wizard_developer.jpg", class: "img-fluid"%>
+    </div>
   </div>
 
-  <div class="card-explication-img">
-    <%= image_tag "wizard_developer.jpg", class: "img-fluid"%>
+  <div class="col-6-md col-7-sm col-15-xs card-two d-flex flex-md-row flex-column align-items-center">
+    <div class="card-explication-img">
+      <%= image_tag "banner.jpg", class: "img-fluid"%>
+    </div>
+    <div class="card-explication flex-grow-1">
+      <h3 class="second-title">Des freelances compétents dans tous les domaines à portée de clic magic !</h3>
+      <ul>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Un travail de qualité - efficace et fiable</h6>
+          <p class="card-explication-p">Recevez des livraisons ponctuelles et de qualité, qu'il s'agisse d'un travail à court terme ou d'un projet complexe</p>
+        </li>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Sécurité pour chaque commande</h6>
+          <p class="card-explication-p">Paiements protégés par la technologie SSL. Les transactions ne sont pas libérées tant qu'une livraison n'a pas été approuvée.</p>
+        </li>
+        <li class="p-2">
+          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Local ou mondial</h6>
+          <p class="card-explication-p">Travaillez avec des experts germanophones ou des talents internationaux, en fonction de vos préférences et de vos besoins.</p>
+        </li>
+      </ul>
+    </div>
   </div>
+
+<div class="col-6-md col-7-sm col-15-xs card-two image-grid">
+    <div class="badge-container">
+      <%= image_tag "red.png", class: "badge-img"%>
+    </div>
+    <div class="badge-container">
+      <%= image_tag "green.png", class: "badge-img"%>
+    </div>
+    <div class="badge-container">
+      <%= image_tag "blue.png", class: "badge-img"%>
+    </div>
+    <div class="badge-container">
+      <%= image_tag "yellow.png", class: "badge-img"%>
+    </div>
 </div>
