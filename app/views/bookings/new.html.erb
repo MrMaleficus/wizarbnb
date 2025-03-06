@@ -5,7 +5,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="house house-<%= @service.user.house %> my-3 col-3" >
+    <div class="card-house house-<%= @service.user.house %> my-3 col-3" >
       <div class="avatar-container">
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{@service.user.nickname}", class:"card-avatar" %>
         <%= image_tag "#{@service.user.house}.png", class:"avatar-badge-format" %>
@@ -44,5 +44,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>
