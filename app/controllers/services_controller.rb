@@ -2,9 +2,6 @@ class ServicesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   def index
     @services = Service.all
-    #    @users = @services.map(&:user).uniq
-    @users = User.all
-
   end
 
   def show

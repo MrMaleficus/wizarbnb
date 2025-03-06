@@ -28,7 +28,7 @@ export default class extends Controller {
     }
     const basePrice = parseFloat(this.data.get("basePrice"));
     const totalPrice = days * basePrice;
-    this.priceTarget.textContent = `${totalPrice.toFixed(2)} € (${days} jour ${days > 1 ? "s" : ""})`;
+    this.priceTarget.textContent = `${totalPrice.toFixed(2)} € (${days} jour${days > 1 ? "s" : ""})`;
   }
 
   submit(event) {
