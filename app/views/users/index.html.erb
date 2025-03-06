@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <% @users.each do |user| %>
-      <div class="house house-<%= user.house %> my-3 col-3" >
+      <div class="card-house house-<%= user.house %> my-3 col-3" >
         <%= link_to user_path(user) do %>
           <div class="avatar-container">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"card-avatar" %>

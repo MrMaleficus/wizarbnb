@@ -12,11 +12,11 @@
   </head>
 
 
-<body class="d-flex flex-column min-vh-100">
+<body class="">
 
 
   <% main_background = user_signed_in? ? "background-user background-house-#{current_user.house}" : "" %>
-  <div class="<%= main_background %>">
+  <div class="<%= main_background %> d-flex flex-column flex-grow-1">
     <div class="wizarbnb-navbar">
       <%= render 'shared/navbar' %>
     </div>
