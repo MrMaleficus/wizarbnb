@@ -45,6 +45,55 @@
     </div>
   </div>
 
+<%# Mise en place du carrousel %>
+<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row g-3">
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deuxième slide -->
+    <div class="carousel-item">
+      <div class="row g-3">
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+        <div class="col-3">
+          <%= image_tag "wizard_developer.jpg", class: "d-block w-100" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev" style="z-index: 5;">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" style="z-index: 5;">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
   <div class="col-6-md col-7-sm col-15-xs card-two d-flex flex-md-row flex-column align-items-center">
     <div class="card-explication-img">
       <%= image_tag "banner.jpg", class: "img-fluid"%>
