@@ -2,14 +2,14 @@
   <div class="row">
     <% @users.each do |user| %>
       <div class="card-house house-<%= user.house %> my-3 col-3" >
-        <%= link_to user_path(user) do %>
+        <%= link_to user_path(user), style:"text-decoration: none" do %>
           <div class="avatar-container">
             <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user.nickname}", class:"card-avatar" %>
             <%= image_tag "#{user.house}.png", class:"avatar-badge-format" %>
           </div>
           <div class="card-body">
-            <h3 class="card-title-user" style="color:white;font-family: 'Cinzel', serif"><%= "#{user.name}" %></h3>
-            <h5 class="card-text" style="color:white;font-family: 'Cinzel', serif"><%= "#{pluralize(user.services.size, "service")}" %></h5>
+            <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{user.name}" %></h3>
+            <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{pluralize(user.services.size, "service")}" %></h5>
 
             <%= user.star_rating.html_safe %>
           </div>

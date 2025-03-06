@@ -1,4 +1,4 @@
-  <h1>Détails des services</h1>
+  <h1 class="show-h1">Détails des services</h1>
   <div class="container">
     <div class="row">
       <div class="card-house house-<%= @user.house %> my-3 col-3" >
@@ -7,8 +7,8 @@
             <%= image_tag "#{@user.house}.png", class:"avatar-badge-format" %>
           </div>
           <div class="card-body">
-            <h3 class="card-title-user" style="color:white;font-family: 'Cinzel', serif"><%= "#{@user.name}" %></h3>
-            <h5 class="card-text" style="color:white;font-family: 'Cinzel', serif"><%= "#{pluralize(@user.services.size, "service")}" %></h5>
+            <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif; text-decoartion-none"><%= "#{@user.name}" %></h3>
+            <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif; text-decoration-none"><%= "#{pluralize(@user.services.size, "service")}" %></h5>
           </div>
       </div>
       <div class="col-9 my-5">
