@@ -146,14 +146,18 @@ NICKS.each do |member|
   user.password = "password"
   user.nickname = member
   user.name = profile["name"]
+  if user.name == nil
+    user.name = Faker::Name.name
+  end
   user.house = %w[red green blue yellow].sample
   user.github_id = profile["id"]
   user.save
   4.times do
     service = Service.new
-    service.name = ["JS", "Rust", "Java", "Kotlin", "Ruby", "Python", "Go", "TypeScript", "PHP", "OCaml", "Haskell", "Fortran"].sample
+    service.name = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran].sample
     service.description = Faker::Lorem.paragraph
     service.daily_rate = rand(10..100)
+    service.rating = rand(1..5)
     service.user = user
     service.save
   end

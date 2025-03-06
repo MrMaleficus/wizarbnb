@@ -8,7 +8,7 @@
               <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
                    alt="<%= service.name %> logo"
                    style="width: 20px; height: 20px; margin-right: 8px;">
-              <%= "#{service.name} par #{service.user.name}" %>
+              <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
             </h5>
             <p class="card-text">
               <%= button_to "Réserver ce service", new_service_booking_path(service), method: :get, class: "btn-creation" %>
@@ -20,5 +20,6 @@
         </div>
       </div>
     <% end %>
+    <%= will_paginate @services %>
   </div>
 </div>

@@ -7,8 +7,8 @@
             <%= image_tag "#{@user.house}.png", class:"avatar-badge-format" %>
           </div>
           <div class="card-body">
-            <h3 class="card-title-user" style="color:white"><%= "#{@user.name}" %></h3>
-            <h5 class="card-text" style="color:white"><%= "#{pluralize(@user.services.size, "service")}" %></h5>
+            <h3 class="card-title-user" style="color:white;font-family: 'Cinzel', serif"><%= "#{@user.name}" %></h3>
+            <h5 class="card-text" style="color:white;font-family: 'Cinzel', serif"><%= "#{pluralize(@user.services.size, "service")}" %></h5>
           </div>
       </div>
       <div class="col-9 my-5">
@@ -19,9 +19,8 @@
                 <div class="card-body">
                   <h5 class="card-title"><%= service.name %></h5>
                   <p class="card-text"><%= service.daily_rate %> €</p>
-                  <div class="service-stats mt-3">
-                  </div>
                   <div class="mt-3">
+                    <%= button_to "Réserver ce service", new_service_booking_path(service), method: :get, class: "btn-creation" %>
                   </div>
                 </div>
               </div>

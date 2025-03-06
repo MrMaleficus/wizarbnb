@@ -3,7 +3,9 @@ class ServicesController < ApplicationController
   def index
     @services = Service.all
     if params[:query]
-      @services = Service.search_by_name(params[:query])
+      @services = Service.paginate(page: params[:page], per_page: 52).search_by_name(params[:query])
+    else
+      @services = Service.paginate(page: params[:page], per_page: 52)
     end
   end
 
