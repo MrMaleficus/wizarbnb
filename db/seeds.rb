@@ -154,7 +154,7 @@ NICKS.each do |member|
   user.save
   4.times do
     service = Service.new
-    service.name = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran].sample
+    service.name = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran Perl].sample
     service.description = Faker::Lorem.paragraph
     service.daily_rate = rand(10..100)
     service.rating = rand(1..5)
