@@ -151,7 +151,8 @@ NICKS.each do |member|
   user.save
   4.times do
     service = Service.new
-    service.name = Faker::ProgrammingLanguage.name
+    service.name = ["Javascript", "C", "Rust", "Java", "Kotlin", "Ruby", "Python", "Go", "TypeScript", "C++"].sample
+    service.description = Faker::Lorem.paragraph
     service.daily_rate = rand(10..100)
     service.user = user
     service.save
