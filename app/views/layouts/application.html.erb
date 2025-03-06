@@ -13,24 +13,29 @@
 
 
 <body class="d-flex flex-column min-vh-100">
-  <div class="wizarbnb-navbar">
-    <%= render 'shared/navbar' %>
+
+
+  <% main_background = user_signed_in? ? "background-user background-house-#{current_user.house}" : "" %>
+  <div class="<%= main_background %>">
+    <div class="wizarbnb-navbar">
+      <%= render 'shared/navbar' %>
+    </div>
+
+    <main class="flex-grow-1">
+      <%= yield %>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-copyright">
+        This footer is made with some magic at Le Wagon <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
   </div>
-
-  <main class="flex-grow-1">
-    <%= yield %>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-copyright">
-      This footer is made with some magic at Le Wagon <i class="fa-solid fa-wand-magic-sparkles"></i>
-    </div>
-    <div class="footer-links">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-  </footer>
 </body>

@@ -1,0 +1,17 @@
+.background-user {
+  &.background-house-blue {
+    background-image: url('blue-wall.png');
+  }
+
+  &.background-house-red {
+    background-image: url('red-wall.png');
+    }
+
+  &.background-house-green {
+    background-image: url('green-wall.png');
+  }
+
+  &.background-house-yellow {
+    background-image: url('yellow-wall.png');
+  }
+}
