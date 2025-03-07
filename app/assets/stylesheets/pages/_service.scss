@@ -10,3 +10,169 @@
   border-radius: 6px;
   color: wheat;
 }
+<<<<<<< Updated upstream
+=======
+
+.twovalues {
+  margin-top: 2%;
+  border-style: solid hidden;
+  border-color: rgba(176, 191, 13, 0.4);
+  font-family: 'Cinzel', serif;
+  color: wheat;
+  text-align: center;
+  text-shadow: 4px 4px 8px black;
+}
+
+.all-banner {
+  justify-content: center;
+}
+
+.banner-service-red {
+  margin-right: 30px;
+  position: relative;
+  width:90px;
+  min-height:380px;
+  background-image: url("banner-short2.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  img {
+    animation-duration: 2s;
+    animation-name: slidein;
+    display: none;
+    position: absolute;
+  }
+  &:hover {
+    background-image: none;
+    img {
+      animation-duration: 1.5s;
+      animation-name: slidein;
+      display: block;
+    }
+  }
+  &:not(:hover) {
+    img {
+      animation-duration: .7s;
+      animation-name: slideout;
+    }
+  }
+}
+
+.banner-service-green {
+  margin-right: 30px;
+  position: relative;
+  width:90px;
+  min-height:380px;
+  background-image: url("banner-short-green.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  img {
+    animation-duration: 2s;
+    animation-name: slidein;
+    display: none;
+    position: absolute;
+  }
+  &:hover {
+    background-image: none;
+    img {
+      animation-duration: 1.5s;
+      animation-name: slidein;
+      display: block;
+    }
+  }
+  &:not(:hover) {
+    img {
+      animation-duration: .7s;
+      animation-name: slideout;
+    }
+  }
+}
+
+.banner-service-blue {
+  margin-right: 30px;
+  position: relative;
+  width:90px;
+  min-height:380px;
+  background-image: url("banner-short-blue.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  img {
+    animation-duration: 2s;
+    animation-name: slidein;
+    display: none;
+    position: absolute;
+  }
+  &:hover {
+    background-image: none;
+    img {
+      animation-duration: 1.5s;
+      animation-name: slidein;
+      display: block;
+    }
+  }
+  &:not(:hover) {
+    img {
+      animation-duration: .7s;
+      animation-name: slideout;
+    }
+  }
+}
+
+
+.banner-service-yellow {
+  margin-right: 30px;
+  position: relative;
+  width:90px;
+  min-height:380px;
+  background-image: url("banner-short-yellow.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  img {
+    display: none;
+    position: absolute;
+  }
+  &:hover {
+    background-image: none;
+    img {
+      animation-duration: 1.5s;
+      animation-name: slidein;
+      display: block;
+    }
+  }
+  &:not(:hover) {
+    img {
+      animation-duration: .7s;
+      animation-name: slideout;
+    }
+  }
+}
+
+@keyframes slidein {
+  from {
+    top: -39%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes slideout {
+  from {
+    top: 0%;
+    display: block;
+  }
+
+  to {
+    top: -35%;
+    display: none;
+  }
+}
+
+.class-name {
+  font-family: 'Cinzel', serif;
+  color: wheat;
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
+  padding-top: 15px;
+}
+>>>>>>> Stashed changes
