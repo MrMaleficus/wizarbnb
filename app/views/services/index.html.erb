@@ -32,9 +32,9 @@
     <% end %>
   </div>
 </div>
-<div class="apple_pagination m-3 card-dash text-center">
+<div class="apple_pagination m-3 card-dash-pagination" style="text-align: center">
   <div class="page_info">
     <%= page_entries_info @posts %>
   </div>
-  <%= will_paginate @services, previous_label: "Précédent", next_label: "Suivant", container: false %>
+  <%= will_paginate @services, previous_label: "<", next_label: ">", :container => false %>
 </div>

@@ -32,6 +32,13 @@
   color: wheat;
 }
 
+.card-dash-btn:hover {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: wheat;
+  border-radius: 6px;
+  color: rgba(150, 150, 149, 1s);
+}
+
 .card-dash-btn-ppl {
   border-bottom: 2px solid wheat;
   background-color: rgba(150, 150, 149, 0.3);
@@ -55,4 +62,39 @@
   text-decoration: none;
   color: wheat;
   font-family: 'Cinzel', serif;
+}
+
+
+.card-dash-pagination {
+  border-bottom: 2px solid wheat !important;
+  background-color: rgba(150, 150, 149, 0.3) !important;
+  border-radius: 12px;
+  backdrop-filter: blur(30px);
+  color: wheat;
+  margin: 100px;
+}
+
+.page_info {
+  margin-bottom: 10px;
+}
+
+.card-dash-pagination a {
+  color: yellow !important;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.card-dash-pagination a:hover {
+  background-color: wheat;
+  color: black;
 }
