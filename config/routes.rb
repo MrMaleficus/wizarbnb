@@ -11,6 +11,10 @@ Rails.application.routes.draw do
 
   get "profile" => "users#profile", as: :profile
 
+  resources :services, only: :show do
+    resources :reviews, only: [:new, :create]
+  end
+
   resources :services, except: [:edit, :update] do
     resources :bookings
   end

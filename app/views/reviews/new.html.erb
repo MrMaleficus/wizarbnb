@@ -1,0 +1,27 @@
+<div class="container">
+  <h3>Laisser un avis</h3>
+  <%= form_with model: @review, url: service_reviews_path(@service), local: true do |form| %>
+    <div class="mb-3">
+      <%= form.label :rating, "Note (1 à 5 étoiles)", class: "form-label" %>
+      <div class="rating" data-controller="rating">
+        <% (1..5).each do |star| %>
+          <%= form.radio_button :rating, star, id: "rating-#{star}", class: "d-none", data: { "rating-target": "input" } %>
+          <label for="rating-#{star}"
+                 data-rating-target="star"
+                 data-action="click->rating#selectRating mouseover->rating#highlightStars mouseout->rating#resetStars"
+                 data-value="<%= star %>"
+                 style="cursor: pointer; font-size: 24px;">
+            <i class="fa fa-star"></i>
+          </label>
+        <% end %>
+      </div>
+    </div>
+    <div class="mb-3">
+      <%= form.label :content, "Votre commentaire", class: "form-label" %>
+      <%= form.text_area :content, rows: 4, class: "form-control" %>
+    </div>
+    <div class="text-center">
+      <%= form.submit "Envoyer", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
+    </div>
+  <% end %>
+</div>
