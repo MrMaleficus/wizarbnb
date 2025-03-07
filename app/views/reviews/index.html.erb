@@ -1,0 +1,31 @@
+<div class="container my-5">
+  <h2 class="mb-4">Avis pour le service : <%= @service.name %></h2>
+
+  <% @service.reviews.each do |review| %>
+    <div class="row review-item mb-4 p-3 border rounded">
+      <div class="col-md-3">
+        <div class="card-house house-<%= review.user.house %> my-3 col-3">
+          <%= link_to user_path(review.user), style:"text-decoration: none" do %>
+            <div class="avatar-container">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{review.user.nickname}", class:"card-avatar" %>
+              <%= image_tag "#{review.user.house}.png", class:"avatar-badge-format" %>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{review.user.name}" %></h3>
+              <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{pluralize(review.user.services.size, "service")}" %></h5>
+
+              <%= review.user.star_rating.html_safe %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="review-content">
+          <h4>Note : <%= review.rating %>/5</h4>
+          <p><%= simple_format(review.content) %></p>
+          <p class="text-muted"><small>Posté le <%= l(review.created_at, format: :long) %></small></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

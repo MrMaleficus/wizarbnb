@@ -13,6 +13,10 @@ class Service < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+  def service_rating_update
+    self.update(rating: self.reviews.map(&:rating).sum / self.reviews.size)
+  end
+
   def star_rating
     plain_star = "<i class='fa-solid fa-star' style='color:gold'></i>"
     half_star = "<i class='fa-solid fa-star-half' style='color:gold'></i>"
