@@ -1,7 +1,9 @@
 <div class="card-category">
-  
+
   <div class="banner_title">
-    <h1 class="home-center-top harry-font">Développer vos projets avec les pouvoirs des freelancers</h1>
+    <h1 class="home-center-top harry-font">
+      <%= user_signed_in? ? "Bonjour #{current_user.name}" : "Développer vos projets avec les pouvoirs des freelancers" %>
+      </h1>
   </div>
 
   <div class="search-wrapper">
