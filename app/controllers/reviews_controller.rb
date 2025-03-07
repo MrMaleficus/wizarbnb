@@ -11,12 +11,19 @@ class ReviewsController < ApplicationController
     @service = Service.find(params[:service_id])
   end
 
+  def index
+    @service = Service.find(params[:service_id])
+    @reviews = @service.reviews
+
+  end
+
   def create
     @review = Review.new(review_params)
     @service = Service.find(params[:service_id])
     @review.service = @service
     @review.user = current_user
     if @review.save
+      @review.service.service_rating_update
       redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
