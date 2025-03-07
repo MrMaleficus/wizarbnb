@@ -167,6 +167,7 @@ NICKS.each do |member|
     review.service = Service.all.sample
     review.user = user
     review.save
+    review.service.service_rating_update
   end
   p "Création de #{user.nickname}"
 end
