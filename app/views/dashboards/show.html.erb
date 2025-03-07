@@ -48,8 +48,8 @@
                 <h5 class="card-title card-dash-title">
                   <%= "#{booking.service.name} par #{booking.service.user.name}" %>
                 </h5>
-                <p class="card-text card-dash-text">
-                  <%= link_to "Accéder au profil", user_path(booking.service.user) %>
+                <p class="card-text card-dash-text-profil">
+                  <%= link_to "Profil", user_path(booking.service.user) %>
                 </p>
                 <p class="card-text card-dash-text">
                   <strong>Date de début :</strong> <%= booking.start_date %><br>
