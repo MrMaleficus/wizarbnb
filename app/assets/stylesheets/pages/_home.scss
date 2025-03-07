@@ -100,6 +100,7 @@
 .second-title {
   margin: 40px;
   font-family: 'Cinzel', serif;
+  color: wheat;
 }
 
 .card-two {
@@ -137,7 +138,7 @@
 .card-explication-h6 {
   font-family: 'Cinzel', serif;
   font-size: 1.2rem;
-  color: white;
+  color: wheat;
 }
 
 .card-explication-p {
@@ -349,4 +350,7 @@ body {
   background-size: cover;
   object-fit: cover;
   border-radius: 15px;
+
+.card-two {
+  padding-top: 300px;
 }

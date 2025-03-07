@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :new]
+
   after_action :update_service_rating, only: [:create]
 
   def update_service_rating
@@ -7,8 +9,13 @@ class ReviewsController < ApplicationController
   end
 
   def new
-    @review = Review.new
     @service = Service.find(params[:service_id])
+    if user_signed_in?
+      if current_user.services.include?(@service)
+        redirect_to dashboard_path
+      end
+    end
+    @review = Review.new
   end
 
   def index

@@ -106,7 +106,7 @@ Adouez
 juandelarbol
 mick-sudo)
 
-
+LANGUAGES = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran Perl]
 GITHUB_TOKEN = ENV['GITHUB_TOKEN']
 all_members = []
 #pages = (1..800).to_a.sample(4)
@@ -152,9 +152,9 @@ NICKS.each do |member|
   user.house = %w[red green blue yellow].sample
   user.github_id = profile["id"]
   user.save
-  2.times do
+  3.times do
     service = Service.new
-    service.name = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran Perl].sample
+    service.name = LANGUAGES.sample
     service.description = Faker::Lorem.paragraph
     service.daily_rate = rand(200..400)
     service.user = user

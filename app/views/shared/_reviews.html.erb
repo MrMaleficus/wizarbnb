@@ -1,17 +1,10 @@
 <div class="modal fade" id="reviewsModal-<%= service.id %>" tabindex="-1" aria-labelledby="reviewsModalLabel-<%= service.id %>" aria-hidden="true">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="reviewsModalLabel-<%= service.id %>">
-          Avis pour le service : <%= service.name %> proposé par <%= service.user.name %>
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-      </div>
+    <div class="modal-content" style="background-color: rgba(255, 255, 255, 0);">
       <div class="modal-body">
         <% service.reviews.each do |review| %>
           <div class="card h-100 shadow-sm card-dash mb-4">
             <div class="row g-0">
-              <!-- Carte de l'utilisateur -->
               <div class="col-md-3 border-end">
                 <div class="card-body text-center">
                   <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{review.user.nickname}",
@@ -23,22 +16,18 @@
                   </h5>
                 </div>
               </div>
-              <!-- Contenu de l'avis -->
               <div class="col-md-9">
                 <div class="card-body">
-                  <h4 class="card-title">Note : <%= review.star_rating.html_safe %></h4>
-                  <p class="card-text"><%= simple_format(review.content) %></p>
+                  <h4 class="card-title card-dash-title"><%= review.star_rating.html_safe %></h4>
+                  <p class="card-text" style="color: wheat"><%= review.content %></p>
                   <p class="card-text text-muted">
-                    <small>Posté le <%= l(review.created_at, format: :long) %></small>
+                    <small style="color: white">Posté le <%= l(review.created_at, format: :long) %></small>
                   </p>
                 </div>
               </div>
             </div>
           </div>
         <% end %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
       </div>
     </div>
   </div>

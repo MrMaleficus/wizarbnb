@@ -6,7 +6,6 @@
       <div class="<%= card_user_connect %>">
         <%= user_signed_in? ? "Bonjour #{current_user.name}" : "Développer vos projets avec les pouvoirs des freelancers" %>
       </div>
-        <%# <%=image_tag "#{current_user.house}-card.jpeg" if user_signed_in? %>
       </h1>
   </div>
 
@@ -58,52 +57,52 @@
 <div class="swiper">
         <div class="swiper-wrapper card-list">
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "html.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Maîtrisez HTML & CSS</h2>
             <p class="carrousel-paragraph">Les bases solides pour tout développeur.</p>
-            <a href="https://developer.mozilla.org/fr/docs/Web/HTML" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/HTML" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "js.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Javascript moderne</h2>
             <p class="carrousel-paragraph">Dynamisez vos pages web avec JS.</p>
-            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "framefront.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Frameworks Front-end</h2>
             <p class="carrousel-paragraph">Explorez React, Vue, et les outils de front.</p>
-            <a href="https://react.dev/" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://react.dev/" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "backend-devlpt.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Back-end</h2>
             <p class="carrousel-paragraph">Devenez maître de Ruby on Rails ou Node.js.</p>
-            <a href="https://guides.rubyonrails.org/" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://guides.rubyonrails.org/" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
-            <h2 class="carrousel-title">titre</h2>
+            <%= image_tag "restapi.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Rest API</h2>
             <p class="carrousel-paragraph">Connectez vos apps au monde extérieur.</p>
-            <a href="https://restfulapi.net/" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://restfulapi.net/" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "responsive.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Responsive Design</h2>
             <p class="carrousel-paragraph">Créez des sites adaptables sur tous les écrans.</p>
-            <a href="https://restfulapi.net/" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://restfulapi.net/" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "seo.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">SEO Technique</h2>
             <p class="carrousel-paragraph">Optimisez vos sites pour les moteurs de recherche.</p>
-            <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
           <div class="card-item swiper-slide">
-            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <%= image_tag "deploiement.jpg", class: "carrousel-img" %>
             <h2 class="carrousel-title">Déploiement</h2>
             <p class="carrousel-paragraph">Déployez vos projets sur le web avec confiance.</p>
-            <a href="https://devcenter.heroku.com/categories/reference" class="carrousel-btn">Lire plus ...</a>
+            <a href="https://devcenter.heroku.com/categories/reference" class="carrousel-btn" target=_blank>Lire plus ...</a>
           </div>
         </div>
         <!-- pagination -->
@@ -111,23 +110,4 @@
         <!-- navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-</div>
-
-
-
-
-<%# logo de fin %>
-<div class="col-6-md col-7-sm col-15-xs card-two image-grid">
-    <div class="badge-container">
-      <%= image_tag "red.png", class: "badge-img"%>
-    </div>
-    <div class="badge-container">
-      <%= image_tag "green.png", class: "badge-img"%>
-    </div>
-    <div class="badge-container">
-      <%= image_tag "blue.png", class: "badge-img"%>
-    </div>
-    <div class="badge-container">
-      <%= image_tag "yellow.png", class: "badge-img"%>
-    </div>
 </div>

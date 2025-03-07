@@ -9,6 +9,11 @@ class BookingsController < ApplicationController
 
   def new
     @service = Service.find(params[:service_id])
+    if user_signed_in?
+      if current_user.services.include?(@service)
+        redirect_to dashboard_path
+      end
+    end
     @booking = Booking.new
     @booking.service = @service
     @booked_dates = @service.bookings.map do |booking|
