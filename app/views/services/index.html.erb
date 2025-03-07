@@ -8,22 +8,33 @@
               <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
                    alt="<%= service.name %> logo"
                    style="width: 20px; height: 20px; margin-right: 8px;">
-              <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
+              <%= service.name %> <br>par <%= service.user.name %>
             </h5>
-            <p class="card-text card-dash-text"><strong>A partir de </strong> <%= service.daily_rate %>€</p>
-            <%= service.star_rating.html_safe %> <%= link_to "#{service.reviews.count} avis", service_reviews_path(service), class: "card-text" %>
+            <p class="card-text card-dash-text">
+              <strong>À partir de </strong> <%= service.daily_rate %>€
+            </p>
+            <div class="mb-2">
+              <%= service.star_rating.html_safe %>
+              <a href="#"
+                 class="card-text"
+                 data-bs-toggle="modal"
+                 data-bs-target="#reviewsModal-<%= service.id %>">
+                (<%= service.reviews.count %> avis)
+              </a>
+            </div>
             <p class="card-text card-dash-text">
               <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn-service" %>
             </p>
           </div>
         </div>
       </div>
+      <%= render "shared/reviews", service: service %>
     <% end %>
   </div>
 </div>
-<div class="apple_pagination m-3 card-dash" style="text-align: center">
-  <div class="page_info ">
+<div class="apple_pagination m-3 card-dash text-center">
+  <div class="page_info">
     <%= page_entries_info @posts %>
   </div>
-  <%= will_paginate @services, previous_label: "Précédent", next_label: "Suivant", :container => false %>
+  <%= will_paginate @services, previous_label: "Précédent", next_label: "Suivant", container: false %>
 </div>
