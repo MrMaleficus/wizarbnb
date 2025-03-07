@@ -54,3 +54,10 @@
   color: black; }
 .apple_pagination a:hover, .apple_pagination a:focus {
   text-decoration: underline; }
+
+* {
+  cursor: url('balai_curser.png'), default;
+  button, a, .btn, .clickable {
+    cursor: url('balai_click.png'), pointer !important;
+  }
+}
