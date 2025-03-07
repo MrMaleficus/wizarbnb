@@ -2,7 +2,10 @@
 
   <div class="banner_title">
     <h1 class="home-center-top harry-font">
-      <%= user_signed_in? ? "Bonjour #{current_user.name}" : "Développer vos projets avec les pouvoirs des freelancers" %>
+      <% card_user_connect = user_signed_in? ? "card-connect-#{current_user.house}" : "" %>
+      <div class="<%= card_user_connect %>">
+        <%= user_signed_in? ? "Bonjour #{current_user.name}" : "Développer vos projets avec les pouvoirs des freelancers" %>
+      </div>
       </h1>
   </div>
 
