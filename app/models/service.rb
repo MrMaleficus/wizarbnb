@@ -4,7 +4,7 @@ class Service < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :daily_rate, presence: true, numericality: { greater_than: 0 }
-  validates :rating, presence: true, numericality: { greater_than: 0 }
+  validates :rating, numericality: { greater_than: -1, less_than: 6 }
 
   include PgSearch::Model
   pg_search_scope :search_by_name,

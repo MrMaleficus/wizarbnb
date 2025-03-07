@@ -14,6 +14,9 @@
       font-family: 'Cinzel', serif;
       color: wheat;
       text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     .card-text-user {
       margin-left: 0px;

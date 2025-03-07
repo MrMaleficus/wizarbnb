@@ -10,9 +10,8 @@
                    style="width: 20px; height: 20px; margin-right: 8px;">
               <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
             </h5>
-            <p class="card-text card-dash-text">
-              <strong>A partir de </strong> <%= service.daily_rate %>€
-            </p>
+            <p class="card-text card-dash-text"><strong>A partir de </strong> <%= service.daily_rate %>€</p>
+            <%= service.star_rating.html_safe %> <%= link_to "#{service.reviews.count} avis", service_reviews_path(service), class: "card-text" %>
             <p class="card-text card-dash-text">
               <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn-service" %>
             </p>
