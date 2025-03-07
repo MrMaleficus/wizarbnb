@@ -56,8 +56,8 @@
   text-decoration: underline; }
 
 * {
-  cursor: url('balai_curser.png'), default;
+  cursor: url('Baguette-normal.png'), default;
   button, a, .btn, .clickable {
-    cursor: url('balai_click.png'), pointer !important;
+    cursor: url('Baguette-lumino.png') 16 16, pointer !important;
   }
 }
