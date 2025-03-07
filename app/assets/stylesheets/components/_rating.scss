@@ -1,0 +1,21 @@
+.rating {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ddd;
+  margin: 0 0.2rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}

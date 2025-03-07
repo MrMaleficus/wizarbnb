@@ -1,6 +1,7 @@
 class Service < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   validates :name, presence: true
   validates :daily_rate, presence: true, numericality: { greater_than: 0 }
   validates :rating, presence: true, numericality: { greater_than: 0 }

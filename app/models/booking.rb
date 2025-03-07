@@ -4,6 +4,8 @@ class Booking < ApplicationRecord
   belongs_to :user
   validates :start_date, presence: true
   validates :end_date, presence: true
+  validates :comment, format: { with: /\A[a-zA-Z0-9\s]+\z/, message: "only allows letters and numbers", allow_blank: true }
+  validates :comment, length: { maximum: 512 }
 
   def total_price
     valid_days = (start_date...end_date).to_a

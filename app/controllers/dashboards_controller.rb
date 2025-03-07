@@ -2,6 +2,7 @@ class DashboardsController < ApplicationController
   STATUS_MESSAGE = {
     "pending" => "En attente",
     "accepted" => "Acceptée",
+    "passed" => "Passée",
   }
 
   def show
