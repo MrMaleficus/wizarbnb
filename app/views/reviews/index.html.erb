@@ -12,8 +12,8 @@
         </div>
         <div class="col-md-9">
           <div class="card-body">
-            <h4 class="card-title">Note : <%= review.star_rating.html_safe %></h4>
-            <p class="card-text"><%= simple_format(review.content) %></p>
+            <h4 class="card-title"><%= review.star_rating.html_safe %></h4>
+            <p class="card-text card-dash-text"><%= simple_format(review.content) %></p>
             <p class="card-text text-muted"><small>Posté le <%= l(review.created_at, format: :long) %></small></p>
           </div>
         </div>

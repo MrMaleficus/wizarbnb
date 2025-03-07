@@ -12,9 +12,7 @@
     </div>
     <div class="col-9 my-4">
       <h2 class="dashboard-h2">Sorcier: <%= @service.user.name %></h2>
-      <h3 class="dashboard-h2">Service choisi: <%= @service.name %> <img src="https://abrudz.github.io/logos/<%= @service.name %>.svg"
-                                                                         alt="<%= @service.name %> logo"
-                                                                         style="width: 40px; height: 40px; margin-right: 8px;"></h3>
+      <h3 class="dashboard-h2">Service choisi: <%= @service.name %></h3>
       <div class="row">
         <%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
           turbo: "false",
