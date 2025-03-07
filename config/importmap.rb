@@ -8,3 +8,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "flatpickr" # @4.6.13
+pin "swiper", to: "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js"
+pin_all_from "app/javascript/scripts", under: "scripts"

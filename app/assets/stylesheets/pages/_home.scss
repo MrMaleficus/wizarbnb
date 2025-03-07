@@ -209,20 +209,111 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-// Css du carrousel
+// Test carrousel
 
-.carousel-control-prev, .carousel-control-next {
-  position: absolute;
+
+.card-list .card-item .carrousel-img{
+  width: 230px;
+  height: 150px;
+  border-radius: 2px;
+  margin-bottom: 40px;
+  border: 1px solid rgb(245, 222, 179);
+  padding: 0px;
+}
+
+
+.card-list .card-item {
+  color: white;
+  width: 400px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  border-radius: 8px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(113, 154, 187, 0.2);
+  border: 1px solid rgba(245, 222, 179, 0.5);
+}
+
+.card-list .card-item .carrousel-paragraph {
+  font-size: 1.15em;
+  color: #e3e3e3;
+  font-weight: 500px;
+  margin: 14px 0 40px;
+}
+
+.card-list .card-item .carrousel-btn {
+  font-size: 0.8rem;
+  padding: 10px 35px;
+  color: #030728;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: white;
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+
+.card-list .card-item .carrousel-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 15px;
+  bottom: initial;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  opacity: 0.7;
+  transition: all 0.3s;
+}
+
+// Pour les bullets actives
+.swiper-pagination-bullet-active {
+  width: 16px;
+  height: 16px;
+  background-color:wheat;
+  opacity: 1;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
   top: 50%;
   transform: translateY(-50%);
-  width: 5%;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 20px;
+  height: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
 }
 
-.carousel-control-prev {
-  left: -3%;
+.carrousel-title {
+  color: wheat;
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
 }
 
-.carousel-control-next {
-  right: -3%;
+.carrousel-paragraph {
+  color: wheat;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
 }

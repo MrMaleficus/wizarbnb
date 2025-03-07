@@ -10,9 +10,9 @@
         <h5 class="card-text" style="color:white"><%= "#{pluralize(@service.user.services.size, "service")}" %></h5>
       </div>
     </div>
-    <div class="col-9 my-5">
-      <h2>Sorcier: <%= @service.user.name %></h2>
-      <h2>Service choisi: <%= @service.name %></h2>
+    <div class="col-9 my-4">
+      <h2 class="dashboard-h2">Sorcier: <%= @service.user.name %></h2>
+      <h3 class="dashboard-h2">Service choisi: <%= @service.name %></h3>
       <div class="row">
         <%= form_with model: @booking, url: service_bookings_path(@service), local: true, data: {
           turbo: "false",
@@ -20,21 +20,21 @@
           "datepicker-base-price": @service.daily_rate,
           "datepicker-reserved-dates": @booked_dates.to_json
         } do |form| %>
-          <div class="container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+          <div class="container card-dash ms-0" style="max-width: 600px; padding: 20px;">
             <div class="mb-3">
-              <%= form.label :start_date, "Dates de réservation", class: "form-label" %>
-              <%= form.text_field :start_date, data: { "datepicker-target": "input" }, class: "form-control" %>
+              <%= form.label :start_date, "Dates de réservation", class: "form-label card-dash-title" %>
+              <%= form.text_field :start_date, data: { "datepicker-target": "input" }, class: "form-control card-dash" %>
             </div>
-            <div class="mb-3">
+            <div class="mb-4 card-dash-text">
               <strong>Prix total :</strong>
               <span data-datepicker-target="price" class="price-display">0 €</span>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 card-dash-title">
               <%= form.label :comment, "Commentaire", class: "form-label" %>
-              <%= form.text_area :comment, rows: 3, class: "form-control" %>
+              <%= form.text_area :comment, rows: 3, class: "form-control card-dash" %>
             </div>
             <div class="text-center">
-              <%= form.submit "Réserver", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
+              <%= form.submit "Réserver", class: "btn card-dash-btn", data: { "disable-with": "En cours..." } %>
             </div>
           </div>
         <% end %>
