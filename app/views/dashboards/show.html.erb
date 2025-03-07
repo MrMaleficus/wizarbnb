@@ -22,6 +22,7 @@
                                                                                 alt="<%= service.name %> logo"
                                                                                 style="width: 20px; height: 20px; margin-right: 8px;"></h5>
                 <p class="card-text card-dash-text">Tarif journalier : <%= service.daily_rate %>€</p>
+                <p class="card-text card-dash-text"><%= service.description %></p>
                 <p class="card-text card-dash-text">
                   <%= "#{service.bookings.size} prestations totales." %><br>
                   <%= service.bookings.count { |booking| booking.status == "confirmed" } %> prestations prévues.

@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
   def index
-    if params[:query]
-      @users = User.paginate(page: params[:page], per_page: 36).search_by_name(params[:query])
-    else
-      @users = User.paginate(page: params[:page], per_page: 36)
-    end
+    @users = User.paginate(page: params[:page], per_page: 36)
   end
 
   def show
+    if user_signed_in?
+      if current_user.id == params[:id].to_i
+        redirect_to dashboard_path
+        end
+    end
     @user = User.find(params[:id])
     @services = @user.services
     @bookings = @user.bookings

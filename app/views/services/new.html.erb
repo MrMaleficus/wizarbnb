@@ -6,15 +6,24 @@
 
       <div class="form-inputs">
         <%= f.input :name,
+                    as: :select,
+                    collection: %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran Perl],
                     label: "Nom du service",
                     label_html: { class: "card-dash-text" },
                     input_html: { class: "form-control" },
                     wrapper_html: { class: "mb-3" } %>
 
+
         <%= f.input :daily_rate,
                     label: "Tarif journalier (€)",
                     label_html: { class: "card-dash-text" },
                     input_html: { class: "form-control", type: "number", step: "1" },
+                    wrapper_html: { class: "mb-3" } %>
+
+        <%= f.input :description,
+                    label: "Description",
+                    label_html: { class: "card-dash-text" },
+                    input_html: { class: "form-control", type: "text"},
                     wrapper_html: { class: "mb-3" } %>
       </div>
 
