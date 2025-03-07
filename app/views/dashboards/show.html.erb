@@ -15,12 +15,15 @@
           <div class="col-md-4 mb-4">
             <div class="card h-100 shadow-sm card-dash">
               <div class="card-body">
-                <h5 class="card-title card-dash-title"><%= service.name %></h5>
+                <h5 class="card-title card-dash-title">                <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
+                                                                            alt="<%= service.name %> logo"
+                                                                            style="width: 20px; height: 20px; margin-right: 8px;"><%= service.name %></h5>
                 <p class="card-text card-dash-text">Tarif journalier : <%= service.daily_rate %>€</p>
                 <p class="card-text card-dash-text">
                   <%= "#{service.bookings.size} prestations totales." %><br>
                   <%= service.bookings.count { |booking| booking.status == "confirmed" } %> prestations prévues.
                 </p>
+                <%= service.star_rating.html_safe %> <%= link_to "#{service.reviews.count} avis", service_reviews_path(service), class: "card-text" %>
               </div>
               <div class="card-footer text-end bg-transparent border-top-0">
                 <%= button_to "Effacer", service_path(service), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir effacer ce service ?" }, class: "btn-destroy card-dash-btn" %>
@@ -46,6 +49,9 @@
             <div class="card h-100 shadow-sm card-dash">
               <div class="card-body">
                 <h5 class="card-title card-dash-title">
+                  <img src="https://abrudz.github.io/logos/<%= booking.service.name %>.svg"
+                       alt="<%= booking.service.name %> logo"
+                       style="width: 20px; height: 20px; margin-right: 8px;">
                   <%= "#{booking.service.name} par #{booking.service.user.name}" %>
                 </h5>
                 <p class="card-text card-dash-text">
@@ -81,6 +87,9 @@
             <div class="card h-100 shadow-sm card-dash">
               <div class="card-body">
                 <h5 class="card-title card-dash-title">
+                  <img src="https://abrudz.github.io/logos/<%= booking.service.name %>.svg"
+                       alt="<%= booking.service.name %> logo"
+                       style="width: 20px; height: 20px; margin-right: 8px;">
                   <%= "#{booking.service.name} pour #{booking.user.name}" %>
                 </h5>
                 <p class="card-text card-dash-text">

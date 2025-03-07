@@ -152,14 +152,21 @@ NICKS.each do |member|
   user.house = %w[red green blue yellow].sample
   user.github_id = profile["id"]
   user.save
-  4.times do
+  2.times do
     service = Service.new
     service.name = %w[JS Rust Java Kotlin Ruby Python Go TypeScript PHP OCaml Haskell Fortran Perl].sample
     service.description = Faker::Lorem.paragraph
-    service.daily_rate = rand(10..100)
-    service.rating = rand(1..5)
+    service.daily_rate = rand(200..400)
     service.user = user
     service.save
+  end
+  4.times do
+    review = Review.new
+    review.content = Faker::Lorem.paragraph
+    review.rating = rand(1..5)
+    review.service = Service.all.sample
+    review.user = user
+    review.save
   end
   p "Création de #{user.nickname}"
 end
