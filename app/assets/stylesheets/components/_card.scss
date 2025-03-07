@@ -59,8 +59,12 @@
     }
 
     .house-blue {
-      background-image: url('card-blue.png');
+      background-image: url('final_badge_blue.png');
       transition: ease 0.5s;
+      border-bottom: 2px solid rgb(179, 212, 245);
+      background-color: rgba(150, 150, 149, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(30px);
 
         &:hover {
           transition: ease 0.5s;
@@ -71,8 +75,13 @@
     }
 
     .house-red {
-      background-image: url('card-red.png');
+      background-image: url('final_badge_red.png');
       transition: ease 0.5s;
+      border-bottom: 2px solid rgb(245, 179, 179);
+      background-color: rgba(150, 150, 149, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(30px);
+
 
       &:hover {
         transition: ease 0.5s;
@@ -83,8 +92,12 @@
     }
 
     .house-green {
-      background-image: url('card-green.png');
+      background-image: url('final_badge_green.png');
       transition: ease 0.5s;
+      border-bottom: 2px solid rgb(192, 245, 179);
+      background-color: rgba(150, 150, 149, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(30px);
 
         &:hover {
           transition: ease 0.5s;
@@ -95,8 +108,12 @@
     }
 
     .house-yellow {
-      background-image: url('card-yellow.png');
+      background-image: url('final_badge_yellow.png');
       transition: ease 0.5s;
+      border-bottom: 2px solid rgb(245, 244, 179);
+      background-color: rgba(150, 150, 149, 0.2);
+      border-radius: 12px;
+      backdrop-filter: blur(30px);
 
       &:hover {
         transition: ease 0.5s;
