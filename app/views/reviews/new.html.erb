@@ -1,7 +1,7 @@
 <div class="container">
-  <h3>Laisser un avis</h3>
+  <h3 class="card-dash-title">Laisser un avis</h3>
   <%= form_with model: @review, url: service_reviews_path(@service), local: true do |form| %>
-    <div class="mb-3">
+    <div class="mb-3 card-dash-title">
       <%= form.label :rating, "Note (1 à 5 étoiles)", class: "form-label" %>
       <div class="rating" data-controller="rating">
         <% (1..5).each do |star| %>
@@ -16,12 +16,12 @@
         <% end %>
       </div>
     </div>
-    <div class="mb-3">
+    <div class="mb-3 card-dash-text">
       <%= form.label :content, "Votre commentaire", class: "form-label" %>
-      <%= form.text_area :content, rows: 4, class: "form-control" %>
+      <%= form.text_area :content, rows: 4, class: "form-control card-dash" %>
     </div>
     <div class="text-center">
-      <%= form.submit "Envoyer", class: "btn btn-primary", data: { "disable-with": "En cours..." } %>
+      <%= form.submit "Envoyer", class: "btn card-dash-btn", data: { "disable-with": "En cours..." } %>
     </div>
   <% end %>
 </div>

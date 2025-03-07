@@ -7,8 +7,8 @@
             <%= image_tag "#{@user.house}.png", class:"avatar-badge-format" %>
           </div>
           <div class="card-body">
-            <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif; text-decoartion-none"><%= "#{@user.name}" %></h3>
-            <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif; text-decoration-none"><%= "#{pluralize(@user.services.size, "service")}" %></h5>
+            <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif; text-decoration: none"><%= "#{@user.name}" %></h3>
+            <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif; text-decoration: none";><%= "#{pluralize(@user.services.size, "service")}" %></h5>
           </div>
       </div>
       <div class="col-9 my-5">
@@ -21,13 +21,22 @@
                        alt="<%= service.name %> logo"
                        style="width: 20px; height: 20px; margin-right: 8px;"><%= service.name %></h5>
                   <p class="card-text card-dash-text"><%= service.daily_rate %> €</p>
-                  <%= service.star_rating.html_safe %>
+                  <div class="mb-2">
+                    <%= service.star_rating.html_safe %>
+                    <a href="#"
+                       class="card-text"
+                       data-bs-toggle="modal"
+                       data-bs-target="#reviewsModal-<%= service.id %>">
+                      (<%= service.reviews.count %> avis)
+                    </a>
+                  </div>
                   <div class="mt-3">
                     <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn" %>
                   </div>
                 </div>
               </div>
             </div>
+            <%= render "shared/reviews", service: service %>
           <% end %>
         </div>
       </div>
