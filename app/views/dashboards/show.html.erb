@@ -54,7 +54,8 @@
                        style="width: 20px; height: 20px; margin-right: 8px;">
                   <%= "#{booking.service.name} par #{booking.service.user.name}" %>
                 </h5>
-                <p class="card-text card-dash-text-profil">
+                <%# A MOFIDIER !!!!!!!!!!! %>
+                <p class="card-text card-dash-text">
                   <%= link_to "Profil", user_path(booking.service.user) %>
                 </p>
                 <p class="card-text card-dash-text">
