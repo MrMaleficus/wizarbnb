@@ -1,4 +1,7 @@
 class DashboardsController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
+
+
   STATUS_MESSAGE = {
     "pending" => "En attente",
     "accepted" => "Acceptée",
