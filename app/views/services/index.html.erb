@@ -1,25 +1,48 @@
 <div class="container">
   <div class="row">
-    <% @services.each do |service| %>
-      <div class="col-md-3 mb-3">
-        <div class="card h-100 shadow-sm card-dash m-3">
-          <div class="card-body">
-            <h5 class="card-title card-dash-title">
-              <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
-                   alt="<%= service.name %> logo"
-                   style="width: 20px; height: 20px; margin-right: 8px;">
-              <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
-            </h5>
-            <p class="card-text card-dash-text">
-              <strong>A partir de </strong> <%= service.daily_rate %>€
-            </p>
-            <p class="card-text card-dash-text">
-              <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn-service" %>
-            </p>
+
+      <h2 class="twovalues"> Top des sortilèges </h2>
+
+    <div class=" all-banner d-flex">
+      <div class="banner-service-red">
+        <%= image_tag "banner-long2.png"  %>
+        <p class="class-name">Ruby</p>
+      </div>
+      <div class="banner-service-green">
+        <%= image_tag "banner-long-green.png"  %>
+      <p class="class-name">Python</p>
+      </div>
+      <div class="banner-service-blue">
+        <%= image_tag "banner-long-blue.png"  %>
+      <p class="class-name">Rust</p>
+      </div>
+      <div class="banner-service-yellow">
+        <%= image_tag "banner-long-yellow.png"  %>
+      <p class="class-name">JS</p>
+      </div>
+
+    </div>
+
+      <% @services.each do |service| %>
+        <div class="col-md-3 mb-3">
+          <div class="card h-100 shadow-sm card-dash m-3">
+            <div class="card-body">
+              <h5 class="card-title card-dash-title">
+                <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
+                    alt="<%= service.name %> logo"
+                    style="width: 20px; height: 20px; margin-right: 8px;">
+                <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
+              </h5>
+              <p class="card-text card-dash-text">
+                <strong>A partir de </strong> <%= service.daily_rate %>€
+              </p>
+              <p class="card-text card-dash-text">
+                <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn-service" %>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
   </div>
 </div>
 <div class="apple_pagination m-3 card-dash" style="text-align: center">
