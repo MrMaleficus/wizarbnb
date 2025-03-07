@@ -10,10 +10,14 @@
   border-bottom: 2px solid wheat;
   background-color: rgba(150, 150, 149, 0.3);
   border-radius: 12px;
+  backdrop-filter: blur(30px);
 }
 
 .card-dash-text {
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 200;
+  font-size: 18px;
 }
 
 .card-dash-title {
@@ -24,7 +28,7 @@
 .card-dash-btn {
   border-bottom: 2px solid wheat;
   background-color: rgba(150, 150, 149, 0.3);
-  border-radius: 3px;
+  border-radius: 6px;
   color: wheat;
 }
 
@@ -35,4 +39,13 @@
   font-size: 18px;
   margin: 3px;
   color: wheat;
+}
+
+.btn-service {
+  display: flex;
+  margin-top: auto;
+  text-align: right;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }

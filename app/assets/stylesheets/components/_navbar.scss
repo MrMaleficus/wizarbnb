@@ -2,7 +2,7 @@
   justify-content: space-between;
   // background: rgb(36, 36, 44) ;
   padding: 0.5rem 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(176, 191, 13, 0.6);
   font-family: 'Cinzel', serif;
   p {
     margin: 0;
@@ -20,13 +20,14 @@
 
 .navbar .nav-link {
   // color: #ffffff;
-  color: #ffffff;
+  color: wheat;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size: 18px;
 }
 
 .navbar .nav-link:hover {
-  color: #dcdcdc;
+  color: wheat;
   // color: #42535c;
 }
 
@@ -55,5 +56,5 @@
 }
 
 .logo-name {
-  color: #ffffff;
+  color: wheat;
 }

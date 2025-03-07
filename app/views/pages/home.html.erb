@@ -45,78 +45,71 @@
     </div>
   </div>
 
-<%# Mise en place du carrousel %>
-<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="row g-3">
-        <div class="col-3">
-          <%= image_tag "code_1.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_2.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_3.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_4.jpg", class: "d-block w-100" %>
-        </div>
-      </div>
-    </div>
 
-    <!-- Deuxième slide -->
-    <div class="carousel-item">
-      <div class="row g-3">
-        <div class="col-3">
-          <%= image_tag "code_1.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_2.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_3.jpg", class: "d-block w-100" %>
-        </div>
-        <div class="col-3">
-          <%= image_tag "code_4.jpg", class: "d-block w-100" %>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev" style="z-index: 5;">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next" style="z-index: 5;">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<%# TEST CAROUSEL %>
+<div class="swiper">
+        <div class="swiper-wrapper card-list">
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Maîtrisez HTML & CSS</h2>
+            <p class="carrousel-paragraph">Les bases solides pour tout développeur.</p>
+            <a href="https://developer.mozilla.org/fr/docs/Web/HTML" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Javascript moderne</h2>
+            <p class="carrousel-paragraph">Dynamisez vos pages web avec JS.</p>
+            <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Frameworks Front-end</h2>
+            <p class="carrousel-paragraph">Explorez React, Vue, et les outils de front.</p>
+            <a href="https://react.dev/" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Back-end</h2>
+            <p class="carrousel-paragraph">Devenez maître de Ruby on Rails ou Node.js.</p>
+            <a href="https://guides.rubyonrails.org/" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">titre</h2>
+            <p class="carrousel-paragraph">Connectez vos apps au monde extérieur.</p>
+            <a href="https://restfulapi.net/" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Responsive Design</h2>
+            <p class="carrousel-paragraph">Créez des sites adaptables sur tous les écrans.</p>
+            <a href="https://restfulapi.net/" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">SEO Technique</h2>
+            <p class="carrousel-paragraph">Optimisez vos sites pour les moteurs de recherche.</p>
+            <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=fr" class="carrousel-btn">Lire plus ...</a>
+          </div>
+          <div class="card-item swiper-slide">
+            <%= image_tag "code_1.jpg", class: "carrousel-img" %>
+            <h2 class="carrousel-title">Déploiement</h2>
+            <p class="carrousel-paragraph">Déployez vos projets sur le web avec confiance.</p>
+            <a href="https://devcenter.heroku.com/categories/reference" class="carrousel-btn">Lire plus ...</a>
+          </div>
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 </div>
 
-  <div class="col-6-md col-7-sm col-15-xs card-two d-flex flex-md-row flex-column align-items-center">
-    <div class="card-explication-img">
-      <%= image_tag "banner.jpg", class: "img-fluid"%>
-    </div>
-    <div class="card-explication flex-grow-1">
-      <h3 class="second-title">Des freelances compétents dans tous les domaines à portée de clic magic !</h3>
-      <ul>
-        <li class="p-2">
-          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Un travail de qualité - efficace et fiable</h6>
-          <p class="card-explication-p">Recevez des livraisons ponctuelles et de qualité, qu'il s'agisse d'un travail à court terme ou d'un projet complexe</p>
-        </li>
-        <li class="p-2">
-          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Sécurité pour chaque commande</h6>
-          <p class="card-explication-p">Paiements protégés par la technologie SSL. Les transactions ne sont pas libérées tant qu'une livraison n'a pas été approuvée.</p>
-        </li>
-        <li class="p-2">
-          <h6 class="card-explication-h6"><i class="fa-solid fa-hat-wizard"></i> Local ou mondial</h6>
-          <p class="card-explication-p">Travaillez avec des experts germanophones ou des talents internationaux, en fonction de vos préférences et de vos besoins.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
 
+
+
+<%# logo de fin %>
 <div class="col-6-md col-7-sm col-15-xs card-two image-grid">
     <div class="badge-container">
       <%= image_tag "red.png", class: "badge-img"%>

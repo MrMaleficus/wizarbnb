@@ -2,19 +2,19 @@
   <div class="row">
     <% @services.each do |service| %>
       <div class="col-md-3 mb-3">
-        <div class="card h-100 shadow-sm">
+        <div class="card h-100 shadow-sm card-dash m-3">
           <div class="card-body">
-            <h5 class="card-title">
+            <h5 class="card-title card-dash-title">
               <img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
                    alt="<%= service.name %> logo"
                    style="width: 20px; height: 20px; margin-right: 8px;">
               <%= "#{service.name}" %> <br>par <%= "#{service.user.name}" %>
             </h5>
-            <p class="card-text">
-              <%= button_to "Réserver ce service", new_service_booking_path(service), method: :get, class: "btn-creation" %>
+            <p class="card-text card-dash-text">
+              <strong>A partir de </strong> <%= service.daily_rate %>€
             </p>
-            <p class="card-text">
-              <strong>Tarif journalier :</strong> <%= service.daily_rate %>€
+            <p class="card-text card-dash-text">
+              <%= button_to "Réserver", new_service_booking_path(service), method: :get, class: "btn-creation card-dash-btn-service" %>
             </p>
           </div>
         </div>
@@ -22,8 +22,8 @@
     <% end %>
   </div>
 </div>
-<div class="apple_pagination" style="text-align: center">
-  <div class="page_info">
+<div class="apple_pagination m-3 card-dash" style="text-align: center">
+  <div class="page_info ">
     <%= page_entries_info @posts %>
   </div>
   <%= will_paginate @posts, :container => false %>
