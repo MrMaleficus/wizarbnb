@@ -69,8 +69,8 @@
                   <%= "#{booking.service.name} par #{booking.service.user.name}" %>
                 </h5>
                 <%# A MOFIDIER !!!!!!!!!!! %>
-                <p class="card-text card-dash-text">
-                  <%= link_to "Profil", user_path(booking.service.user) %>
+                <p class="card-text card-dash-text-profil">
+                  <%= link_to "Profil", user_path(booking.service.user), class: "card-dash-text-profil"%>
                 </p>
                 <p class="card-text card-dash-text">
                   <strong>Date de début :</strong> <%= booking.start_date %><br>

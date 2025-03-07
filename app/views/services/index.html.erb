@@ -1,8 +1,5 @@
 <div class="container">
   <div class="row">
-<<<<<<< Updated upstream
-=======
-
       <h2 class="twovalues"> Top des sortilèges </h2>
 
     <div class=" all-banner d-flex">
@@ -23,7 +20,6 @@
       <p class="class-name">JS</p>
       </div>
     </div>
->>>>>>> Stashed changes
     <% @services.each do |service| %>
       <div class="col-md-3 mb-3">
         <div class="card h-100 shadow-sm card-dash m-3">
@@ -56,9 +52,9 @@
     <% end %>
   </div>
 </div>
-<div class="apple_pagination m-3 card-dash text-center">
+<div class="apple_pagination m-3 card-dash-pagination" style="text-align: center">
   <div class="page_info">
     <%= page_entries_info @posts %>
   </div>
-  <%= will_paginate @services, previous_label: "Précédent", next_label: "Suivant", container: false %>
+  <%= will_paginate @services, previous_label: "<", next_label: ">", :container => false %>
 </div>
