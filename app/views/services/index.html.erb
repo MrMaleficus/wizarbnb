@@ -1,5 +1,26 @@
 <div class="container">
   <div class="row">
+
+      <h2 class="twovalues"> Top des sortilèges </h2>
+
+    <div class=" all-banner d-flex">
+      <div class="banner-service-red">
+        <%= image_tag "banner-long2.png"  %>
+        <p class="class-name">Ruby</p>
+      </div>
+      <div class="banner-service-green">
+        <%= image_tag "banner-long-green.png"  %>
+      <p class="class-name">Python</p>
+      </div>
+      <div class="banner-service-blue">
+        <%= image_tag "banner-long-blue.png"  %>
+      <p class="class-name">Rust</p>
+      </div>
+      <div class="banner-service-yellow">
+        <%= image_tag "banner-long-yellow.png"  %>
+      <p class="class-name">JS</p>
+      </div>
+    </div>
     <% @services.each do |service| %>
       <div class="col-md-3 mb-3">
         <div class="card h-100 shadow-sm card-dash m-3">
