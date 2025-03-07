@@ -26,5 +26,5 @@
   <div class="page_info ">
     <%= page_entries_info @posts %>
   </div>
-  <%= will_paginate @posts, :container => false %>
+  <%= will_paginate @services, previous_label: "Précédent", next_label: "Suivant", :container => false %>
 </div>
