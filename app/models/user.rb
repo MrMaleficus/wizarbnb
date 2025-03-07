@@ -5,8 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :services, dependent: :destroy
   has_many :bookings, dependent: :destroy
-
-
+  after_create :setup_user
 
   def average_rating
     self.services.map(&:rating).sum / self.services.size
@@ -21,6 +20,13 @@ class User < ApplicationRecord
     stars
   end
 
+  private
+
+  def setup_user
+    return if self.id < 99
+    self.name = self.email.split('@')[0]
+    self.house = %w[red green blue yellow].sample
+  end
 
 
 end

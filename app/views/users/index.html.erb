@@ -10,7 +10,6 @@
           <div class="card-body">
             <h3 class="card-title-user" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{user.name}" %></h3>
             <h5 class="card-text" style="color:wheat;font-family: 'Cinzel', serif"><%= "#{pluralize(user.services.size, "service")}" %></h5>
-
             <%= user.star_rating.html_safe %>
           </div>
         <% end %>

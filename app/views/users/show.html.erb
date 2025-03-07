@@ -20,7 +20,8 @@
                   <h5 class="card-title card-dash-title"><img src="https://abrudz.github.io/logos/<%= service.name %>.svg"
                        alt="<%= service.name %> logo"
                        style="width: 20px; height: 20px; margin-right: 8px;"><%= service.name %></h5>
-                  <p class="card-text card-dash-text"><%= service.daily_rate %> €</p>
+                  <p class="card-text card-dash-text"><%= service.daily_rate %> €/jour</p>
+                  <p class="card-text card-dash-text"><%= service.description %></p>
                   <div class="mb-2">
                     <%= service.star_rating.html_safe %>
                     <a href="#"
