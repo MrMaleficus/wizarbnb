@@ -1,7 +1,13 @@
 <div class="card-category">
-  
+
   <div class="banner_title">
-    <h1 class="home-center-top harry-font">Développer vos projets avec les pouvoirs des freelancers</h1>
+    <h1 class="home-center-top harry-font">
+      <% card_user_connect = user_signed_in? ? "card-connect-#{current_user.house}" : "" %>
+      <div class="<%= card_user_connect %>">
+        <%= user_signed_in? ? "Bonjour #{current_user.name}" : "Développer vos projets avec les pouvoirs des freelancers" %>
+      </div>
+        <%# <%=image_tag "#{current_user.house}-card.jpeg" if user_signed_in? %>
+      </h1>
   </div>
 
   <div class="search-wrapper">

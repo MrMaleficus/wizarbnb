@@ -319,4 +319,34 @@ body {
   font-size: 14px;
 }
 
+.card-connect-red {
+  background-image: url("red-card.jpg");
+  padding: 200px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
 
+.card-connect-green {
+  background-image: url("green-card.png");
+  padding: 200px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-connect-blue {
+  background-image: url("blue-card.png");
+  padding: 200px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.card-connect-yellow {
+  background-image: url("yellow-card.png");
+  padding: 200px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 15px;
+}
