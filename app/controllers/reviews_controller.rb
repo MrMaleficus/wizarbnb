@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :new]
+
   after_action :update_service_rating, only: [:create]
 
   def update_service_rating
